@@ -1,0 +1,24 @@
+/* Slide-Specific Layouts */
+.financial-charts-slide {
+  padding-bottom: 150px !important;
+  min-height: calc(100vh + 200px) !important;
+}
+
+.executive-card,
+.chart-card,
+.realtime-panel {
+  margin-bottom: 30px !important;
+}
+
+.action-buttons {
+  margin: 30px 0 50px 0 !important;
+}
+
+#slide-financial-charts {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+}
+
+#slide-financial-charts .financial-charts-slide {
+    transform: translateY(-30px);
+}

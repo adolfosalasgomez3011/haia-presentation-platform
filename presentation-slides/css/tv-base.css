@@ -1,0 +1,27 @@
+/* Base Variables & Layout */
+:root {
+    --news-primary: #c41e3a;
+    --news-accent: #ffd700;
+    --news-text: #ffffff;
+    --news-bg: #0f0f0f;
+    --news-dark: #8b0000;
+}
+
+.live-news-tv-slide {
+    background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 50%, #2d2d2d 100%);
+    color: var(--news-text);
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+    overflow-y: auto;
+    position: relative;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Container Base Styles */
+#news-header-container,
+#main-content-container,
+#lower-third-container {
+    width: 100%;
+    position: relative;
+}

@@ -1,0 +1,68 @@
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .main-chart-section {
+        margin: 15px;
+        padding: 20px;
+    }
+    
+    .chart-header {
+        flex-direction: column;
+        gap: 15px;
+        align-items: stretch;
+    }
+    
+    .chart-controls {
+        justify-content: center;
+    }
+    
+    .data-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        margin: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .news-header-bar {
+        padding: 8px 15px;
+    }
+    
+    .news-logo {
+        font-size: 1.1em;
+    }
+    
+    .chart-controls {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .data-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .data-card {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .news-header-bar {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+    }
+    
+    .main-chart-section {
+        margin: 10px;
+        padding: 15px;
+    }
+    
+    .chart-header h3 {
+        font-size: 1.2em;
+    }
+    
+    .chart-btn {
+        padding: 8px 15px;
+        font-size: 0.8em;
+    }
+}

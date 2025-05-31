@@ -1,0 +1,45 @@
+import os
+import requests
+from dotenv import load_dotenv
+
+load_dotenv()
+
+
+def scraperapi_search(query, num_results=5):
+    api_key = os.getenv("SCRAPERAPI_KEY")
+    if not api_key:
+        print("SCRAPERAPI_KEY is missing!")
+        return None
+
+    print(f"[ScraperAPI] Query: {query}")
+    print(f"API Key starts with: {api_key[:5]}...")
+
+    params = {
+        'api_key': api_key,
+        'url': f"https://www.bing.com/search?q={query}"
+    }
+
+    try:
+        response = requests.get("http://api.scraperapi.com", params=params)
+        print("ScraperAPI status code:", response.status_code)
+        html = response.text
+
+        # Extract results from raw HTML (basic pattern)
+        snippets = []
+        lines = html.split('\n')
+        for line in lines:
+            if '<li class="b_algo"' in line or 'href="http' in line:
+                snippets.append(line.strip())
+            if len(snippets) >= num_results:
+                break
+
+        if not snippets:
+            print("No valid content parsed.")
+            return None
+
+        print(f"Parsed {len(snippets)} snippet lines")
+        return "\n\n".join(snippets)
+
+    except Exception as e:
+        print("Exception during ScraperAPI request:", e)
+        return None

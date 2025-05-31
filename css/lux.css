@@ -1,0 +1,279 @@
+/* Core Reveal.js override */
+.reveal {
+    font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+    color: #222;
+    background-color: #ffffff;
+    margin-top: 0 !important;  /* ← reduced to eliminate vertical gap */
+    padding-top: 0 !important;
+    position: relative;
+  }
+  
+  /* Headings */
+  .reveal h1,
+  .reveal h2,
+  .reveal h3 {
+    color: #004c6d;
+    font-weight: 600;
+  }
+  .reveal ul {
+    font-size: 1.1em;
+  }
+  
+  /* Header */
+  .hatch-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 10px 30px;
+    gap: 10px;
+    background-color: #ffffff !important;
+    color: #004c6d;
+    font-size: 0.9em;
+    z-index: 1000;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  .hatch-logo {
+    height: 30px;
+    vertical-align: middle;
+  }
+  .hatch-title {
+    font-size: 1.2em;
+    font-weight: 600;
+  }
+  
+  /* Footer */
+  .hatch-footer {
+    bottom: 0;
+    text-align: center;
+    border-top: 1px solid #ccdce6;
+    pointer-events: none;
+    position: relative;
+    z-index: 0;
+  }
+  .hatch-footer img {
+    height: 24px;
+    float: right;
+    margin-right: 20px;
+    margin-top: -4px;
+  }
+  
+  /* Slide backgrounds */
+  .reveal section[data-background] {
+    background-size: cover;
+    background-position: center;
+  }
+  .reveal section {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  
+  /* Speaker notes */
+  .reveal .speaker-notes {
+    color: #777;
+    font-style: italic;
+  }
+  
+  /* Title container */
+  .hatch-title-container {
+    width: 100%;
+    background-color: #415564;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 180px; /* or 200px, etc. */
+    padding: 0 2em; /* reduce vertical padding if needed */
+    margin: 0;
+    margin-top: 60px; /* aligns with fixed header */
+    box-sizing: border-box;
+    margin-bottom: 0;         /* adjust as needed */
+    z-index: 2;
+  }
+  
+  /* Title text */
+  .hatch-title-slide,
+  .reveal h2.hatch-title-slide {
+    font-size: 3.5rem !important;
+    color: white !important;
+    margin: 0 !important;
+    line-height: 2 !important;
+    text-align: left;
+    text-transform: none;
+    transform: none !important;
+    position: static !important;
+    opacity: 1 !important;
+  }
+  
+  /* Media row layout */
+  .hatch-media-container {
+    width: 100%;
+    overflow-x: visible; /* was hidden before */
+    overflow-y: hidden;
+    box-sizing: border-box;
+  }
+  
+  .hatch-media-row {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+  }
+  
+  .hatch-media-row img,
+.hatch-media-row video {
+  flex: 1 1 33.3333%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  min-width: 0;   /* prevents flex item from overflowing */
+}
+  
+  /* Meta under media (if needed) */
+  .hatch-meta-text {
+    text-align: left;
+    padding: 0.5em 2em 0;
+    font-size: 0.9em;
+    color: #415564;
+    margin-top: -10px;
+  }
+
+  .hatch-title-container + .hatch-media-container {
+    margin-top: 0; /* remove gap just in case */
+    padding-top: 0;
+    position: relative;
+    z-index: 1;
+  }
+  
+  
+    
+  .reveal .slides section {
+    display: block !important;
+    overflow-y: auto !important;
+    overflow-x: hidden;
+    height: calc(100vh - 160px); /* Header (60px) + title (100px) + footer clearance */
+    padding: 2em;
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+
+  /* Compensate for header (60px), title (180px), media row (280px) = 520px */
+    .reveal .slides {
+    position: relative !important;
+    pointer-events: auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    transform: none !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    top: 0 !important;
+    left: 0 !important;
+    height: auto !important;
+    max-height: 100% !important;
+    margin-top: 40px !important;  /* or 1em for scalable spacing */
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+  }
+  
+  
+  
+  .scrollable-content {
+    flex: 1 1 auto;
+    overflow-y: auto;
+    padding: 2em;
+    box-sizing: border-box;
+    width: 100%;
+    max-height: 100%;  /* ✅ this prevents clipping */
+  }
+  
+  @media (max-width: 768px) {
+    .reveal section.content-slide {
+      max-height: calc(100vh - 300px); /* header + title + footer on mobile */
+      padding-bottom: 60px !important; /* slightly more breathing room */
+    }
+  }
+  }
+  .hatch-reveal-patched {
+    height: 100vh; /* Full height always */
+    display: flex;
+    flex-direction: column;
+    position: relative;   /* ✅ asegúrate de esto */
+    overflow: visible !important;    /* ✅ permite ver los controles */
+  }
+  
+  .hatch-global-footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    padding: 0.5em 1.5em;
+    background-color: #ffffff;
+    font-size: 0.75em;
+    color: #415564;
+    border-top: 1px solid #ccdce6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 9999;
+    box-sizing: border-box;
+  }
+  
+  .hatch-global-footer img {
+    height: 20px;
+    margin: 0 0.5em;
+    vertical-align: middle;
+  }
+  
+  .footer-left {
+    text-align: left;
+    flex: 1;
+  }
+  
+  .footer-right {
+    text-align: right;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+  }
+
+  .reveal aside.controls {
+    display: flex !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    position: fixed !important;
+    bottom: 60px !important;         /* Evita superposición con el footer */
+    right: 2em;
+    z-index: 10000 !important;
+  }
+  
+  .reveal section.content-slide {
+    max-height: calc(100vh - 340px); /* header + footer */
+    overflow-y: auto;
+    padding: 2em;
+    box-sizing: border-box;
+    padding-bottom: 40px !important; /* extra space for the fixed footer */
+  }
+  
+  .reveal .backgrounds {
+    z-index: 0;
+  }
+
+  .reveal section.scrollable-slide {
+    max-height: calc(100vh - 600px); /* header + title + media row + footer */
+    overflow-y: auto;
+    padding: 2em;
+    box-sizing: border-box;
+    padding-bottom: 40px !important; /* protect content from footer overlap */
+  }
+   
+  
+  /* Normalize page */
+  html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  

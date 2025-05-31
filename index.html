@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hatch Advisory Presentation</title>
+
+    <!-- Reveal.js core styles -->
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/white.css">
+    <link rel="stylesheet" href="css/lux.css">
+    <link rel="stylesheet" href="plugin/highlight/monokai.css">
+    
+    <!-- Custom CSS modules -->
+    <link rel="stylesheet" href="css/custom/reveal-overrides.css">
+    <link rel="stylesheet" href="css/custom/hatch-branding.css">
+    <link rel="stylesheet" href="css/custom/slide-layouts.css">
+    <link rel="stylesheet" href="css/company-themes.css">
+    <link rel="stylesheet" href="css/theme/hatch.css" id="theme">
+    
+    <!-- Company-specific CSS (will load conditionally) -->
+    <link rel="stylesheet" href="css/suncoke/financial-charts.css">
+
+    <!-- Reveal.js core script -->
+    <script src="dist/reveal.js"></script>
+  </head>
+
+  <body>
+    <!-- AutoGen Status Indicator -->
+    <div id="autogen-status" class="autogen-status">🤖 Loading AutoGen data...</div>
+
+    <header class="hatch-header">
+      <img src="img/logo.png" alt="Hatch Logo" class="hatch-logo">
+      <span class="hatch-title">Hatch Advisory</span>
+    </header>
+
+    <div class="hatch-title-container">
+      <h2 class="hatch-title-slide">Competency Matrix Review</h2>
+    </div>
+
+    <div class="hatch-media-container" id="media-row">
+      <div class="hatch-media-row">
+        <img src="img/plant01.jpg" alt="Plant">
+        <video src="media/bulldozer-logo-reveal.mp4" autoplay muted loop playsinline></video>
+        <img src="img/minepic01.jpg" alt="Mine">
+      </div>
+    </div>
+
+    <!-- Reveal.js Slides -->
+    <div class="reveal hatch-reveal-patched">
+      <div class="slides">
+        <section id="slide-company-info"></section>
+        <section id="slide-executive-summary"></section>
+        <section id="slide-financial-charts"></section>
+        <section id="slide-competency-matrix"></section>
+        <section id="slide-live-news-tv"></section>
+      </div>
+    </div>
+
+    <footer class="hatch-global-footer">
+      <div class="footer-left">
+        © Hatch 2023. All rights reserved.
+      </div>
+      <div class="footer-right">
+        <span id="footer-date"></span>
+        <img src="img/logo.png" alt="Hatch Logo">
+        <span class="slide-number-footer"></span>
+      </div>
+    </footer>
+
+    <!-- Reveal.js Plugins -->
+    <script src="plugin/highlight/highlight.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/scroll/scroll.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js-mermaid-plugin@2.3.0/plugin/mermaid/mermaid.js"></script>
+
+    <!-- Chart.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- CORE SCRIPTS (always load) -->
+    <script src="autogen-data-loader.js"></script>
+    <script src="financial-charts.js"></script>
+    <script src="js/data-loader.js"></script>
+    <script src="js/presentation/slide-loader.js"></script>
+    <script src="js/presentation/autogen-integration.js"></script>
+    <script src="js/presentation/reveal-config.js"></script>
+    <script src="js/presentation/presentation-init.js"></script>
+    <script src="js/teine/financial-data-api.js"></script>
+
+    <!-- 🎯 CONDITIONAL COMPANY SCRIPT LOADING -->
+    <script>
+    console.log('🔍 DEBUGGING SCRIPT LOADING...');
+
+    // Get URL parameters
+    const urlParams = new URLSearchParams(window.location.search);
+    const company = urlParams.get('company');
+
+    console.log('🔍 URL:', window.location.href);
+    console.log('🔍 Company param:', company);
+    console.log('🔍 Company param type:', typeof company);
+
+    // Function to dynamically load scripts
+    function loadScript(src) {
+      return new Promise((resolve, reject) => {
+        const script = document.createElement('script');
+        script.src = src;
+        script.onload = () => resolve();
+        script.onerror = () => reject(new Error(`Failed to load script: ${src}`));
+        document.head.appendChild(script);
+      });
+    }
+
+    // CONDITIONAL SCRIPT LOADING BASED ON COMPANY
+    if (company === 'suncoke') {
+      console.log('🔴 SUNCOKE DETECTED - LOADING SUNCOKE SCRIPTS');
+      
+      // Block Teine scripts
+      window.BLOCK_TEINE_SCRIPTS = true;
+      window.SUNCOKE_EXCLUSIVE = true;
+      
+      // Load SunCoke scripts
+      Promise.all([
+        loadScript('js/suncoke/yahoo-news.js'),
+        loadScript('js/suncoke/executive-cards-data.js'),
+        loadScript('js/suncoke/executive-summary.js'),
+        loadScript('js/suncoke/financial-charts.js')
+      ]).then(() => {
+        console.log('✅ All SunCoke scripts loaded successfully');
+      }).catch(error => {
+        console.error('❌ Error loading SunCoke scripts:', error);
+      });
+      
+    } else if (company === 'teine' || company === null || company === '') {
+      console.log('🔵 TEINE DETECTED - LOADING TEINE SCRIPTS');
+      
+      // Load Teine scripts
+      Promise.all([
+        loadScript('js/teine/teine-executive-summary.js'),
+        loadScript('js/teine/teine-content-details.js'),
+        loadScript('js/teine/teine-financial-charts.js'),
+        loadScript('js/teine/executive-summary.js')
+      ]).then(() => {
+        console.log('✅ All Teine scripts loaded successfully');
+      }).catch(error => {
+        console.error('❌ Error loading Teine scripts:', error);
+      });
+      
+    } else {
+      console.log('⚠️ UNKNOWN COMPANY:', company);
+    }
+    </script>
+
+    <!-- Initialize slides after everything loads -->
+    <script>
+    document.addEventListener('DOMContentLoaded', async function() {
+        console.log('🚀 DOM loaded, loading slides...');
+        
+        // Wait a moment for conditional scripts to load
+        setTimeout(async () => {
+          if (typeof loadAllSlides === 'function') {
+            await loadAllSlides();
+            console.log('✅ All slides loaded');
+          } else {
+            console.error('❌ loadAllSlides function not found');
+          }
+          
+          // Initialize Reveal.js
+          if (window.Reveal && typeof Reveal.sync === 'function') {
+            Reveal.sync();
+            console.log('✅ Reveal.js synchronized');
+          }
+        }, 500);
+    });
+    </script>
+
+  </body>
+</html>

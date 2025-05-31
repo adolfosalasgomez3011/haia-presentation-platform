@@ -1,0 +1,173 @@
+<!-- Main Chart Component -->
+<div class="main-chart-section">
+    <div class="chart-header">
+        <h3>📊 LIVE MARKET ANALYSIS</h3>
+        <div class="chart-controls">
+            <button class="chart-btn active" data-chart="steel" onclick="updateChartType('steel')">Steel Prices</button>
+            <button class="chart-btn" data-chart="coal" onclick="updateChartType('coal')">Met Coal</button>
+            <button class="chart-btn" data-chart="sxc" onclick="updateChartType('sxc')">SXC Stock</button>
+        </div>
+    </div>
+    
+    <div class="chart-display">
+        <svg width="100%" height="300" viewBox="0 0 600 300">
+            <!-- Grid lines -->
+            <defs>
+                <pattern id="grid" width="60" height="30" patternUnits="userSpaceOnUse">
+                    <path d="M 60 0 L 0 0 0 30" fill="none" stroke="rgba(255,215,0,0.3)" stroke-width="1"/>
+                </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#grid)" />
+            
+            <!-- Chart line -->
+            <polyline id="chart-line" 
+                points="50,250 100,220 150,190 200,170 250,150 300,140 350,130 400,120 450,110 500,100 550,90"
+                fill="none" 
+                stroke="#00ff00" 
+                stroke-width="4"
+                style="filter: drop-shadow(0 0 10px #00ff00);">
+            </polyline>
+            
+            <!-- Data points -->
+            <circle cx="50" cy="250" r="5" fill="#ffd700"/>
+            <circle cx="100" cy="220" r="5" fill="#ffd700"/>
+            <circle cx="150" cy="190" r="5" fill="#ffd700"/>
+            <circle cx="200" cy="170" r="5" fill="#ffd700"/>
+            <circle cx="250" cy="150" r="5" fill="#ffd700"/>
+            <circle cx="300" cy="140" r="5" fill="#ffd700"/>
+            <circle cx="350" cy="130" r="5" fill="#ffd700"/>
+            <circle cx="400" cy="120" r="5" fill="#ffd700"/>
+            <circle cx="450" cy="110" r="5" fill="#ffd700"/>
+            <circle cx="500" cy="100" r="5" fill="#ffd700"/>
+            <circle cx="550" cy="90" r="5" fill="#ffd700"/>
+            
+            <!-- Labels -->
+            <text x="60" y="30" fill="#ffd700" font-size="18" font-weight="bold" id="chart-title">📊 SXC Stock Price ($)</text>
+            <text x="520" y="290" fill="#ccc" font-size="14">Time →</text>
+            <text x="420" y="50" fill="#ffffff" font-size="20" font-weight="bold" id="current-value">Current: $8.45</text>
+        </svg>
+    </div>
+</div>
+
+<style>
+.main-chart-section {
+    background: rgba(0,0,0,0.8);
+    padding: 20px;
+    border-radius: 15px;
+    margin: 20px;
+    border: 2px solid var(--news-accent);
+}
+
+.chart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.chart-header h3 {
+    color: var(--news-accent);
+    margin: 0;
+}
+
+.chart-controls {
+    display: flex;
+    gap: 10px;
+}
+
+.chart-btn {
+    background: rgba(255,255,255,0.1);
+    color: white;
+    border: 1px solid rgba(255,255,255,0.2);
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.chart-btn:hover,
+.chart-btn.active {
+    background: var(--news-primary);
+    border-color: var(--news-primary);
+}
+
+.chart-display {
+    background: rgba(0,0,0,0.3);
+    border-radius: 10px;
+    border: 1px solid rgba(255,215,0,0.3);
+    padding: 10px;
+}
+
+#chart-line {
+    stroke-dasharray: 1500;
+    stroke-dashoffset: 1500;
+    animation: draw-line 4s ease-in-out infinite;
+}
+
+@keyframes draw-line {
+    0% { stroke-dashoffset: 1500; }
+    50% { stroke-dashoffset: 0; }
+    100% { stroke-dashoffset: 1500; }
+}
+</style>
+
+<script>
+// Chart functionality
+function updateChartType(chartType) {
+    const title = document.getElementById('chart-title');
+    const currentValue = document.getElementById('current-value');
+    
+    // Update button states
+    document.querySelectorAll('.chart-btn').forEach(btn => btn.classList.remove('active'));
+    document.querySelector(`[data-chart="${chartType}"]`).classList.add('active');
+    
+    // Update chart content
+    if (title && currentValue) {
+        switch(chartType) {
+            case 'steel':
+                title.textContent = '📊 Steel Prices ($/ton)';
+                currentValue.textContent = 'Current: $285.50';
+                break;
+            case 'coal':
+                title.textContent = '📊 Met Coal Prices ($/ton)';
+                currentValue.textContent = 'Current: $285.00';
+                break;
+            case 'sxc':
+                title.textContent = '📊 SXC Stock Price ($)';
+                currentValue.textContent = 'Current: $8.45';
+                break;
+        }
+    }
+}
+
+// Initialize chart manager
+window.chartManager = {
+    init() {
+        console.log('📊 Chart manager initialized');
+        setInterval(() => {
+            this.updateChart();
+        }, 5000);
+    },
+    
+    updateChart() {
+        const chartLine = document.getElementById('chart-line');
+        if (chartLine) {
+            const points = this.generatePoints();
+            chartLine.setAttribute('points', points);
+        }
+    },
+    
+    generatePoints() {
+        const points = [];
+        for (let i = 0; i < 11; i++) {
+            const x = 50 + (i * 50);
+            const baseY = 150;
+            const variation = (Math.random() - 0.5) * 100;
+            const trend = i * -15;
+            const y = Math.max(90, Math.min(250, baseY + variation + trend));
+            points.push(`${x},${y}`);
+        }
+        return points.join(' ');
+    }
+};
+</script>

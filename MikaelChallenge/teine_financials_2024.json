@@ -1,0 +1,70 @@
+{
+  "company": {
+    "name": "Teine Energy Ltd.",
+    "ticker": "Private",
+    "exchange": "Private Company",
+    "headquarters": "Calgary, Alberta, Canada",
+    "website": "https://www.teine-energy.com"
+  },
+  "financials": {
+    "period": "2024 Current",
+    "currency": "CAD",
+    "revenue": {
+      "value": "TBD",
+      "source": "Annual Report",
+      "note": "Private company - revenue not publicly disclosed"
+    },
+    "ebitda": {
+      "value": "TBD", 
+      "source": "Annual Report",
+      "note": "Private company - EBITDA not publicly disclosed"
+    },
+    "market_cap": {
+      "value": "Private",
+      "source": "Private Company",
+      "note": "Not publicly traded - valuation private"
+    },
+    "assets": {
+      "total_acres": 1100000,
+      "production_assets": 4,
+      "daily_production": "46000 boe/d"
+    }
+  },
+  "operations": {
+    "viking": {
+      "production": "28000 boe/d",
+      "acres": 800000,
+      "region": "Saskatchewan",
+      "status": "Primary asset - largest Viking producer"
+    },
+    "bakken": {
+      "production": "9000 boe/d", 
+      "region": "Western Saskatchewan",
+      "recovery_method": "Enhanced Oil Recovery",
+      "status": "Low decline production"
+    },
+    "duvernay": {
+      "production": "2000 boe/d",
+      "acres": 300000,
+      "region": "Central Alberta", 
+      "oil_type": "Light oil shale"
+    },
+    "chauvin": {
+      "production": "7000 boe/d",
+      "region": "Central Alberta",
+      "infrastructure": "75km pipeline to Hardisty hub",
+      "recovery_method": "Enhanced Oil Recovery"
+    }
+  },
+  "ownership": {
+    "structure": "Private",
+    "key_investor": "CPP Investment Board",
+    "note": "Institutional backing provides financial stability"
+  },
+  "data_quality": {
+    "last_updated": "2024-05-29",
+    "source": "Company website and public statements",
+    "reliability": "High for operational data, Limited for financials (private company)",
+    "verification": "Cross-referenced with regulatory filings"
+  }
+}

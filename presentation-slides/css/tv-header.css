@@ -1,0 +1,58 @@
+/* News Header Styles */
+.news-header-bar {
+    background: linear-gradient(90deg, var(--news-primary) 0%, var(--news-dark) 100%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 25px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    position: relative;
+    z-index: 10;
+}
+
+.news-logo {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+.logo-icon {
+    margin-right: 10px;
+    font-size: 1.5em;
+}
+
+.live-indicator {
+    display: flex;
+    align-items: center;
+    background: rgba(255,255,255,0.2);
+    padding: 6px 15px;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.live-dot {
+    width: 10px;
+    height: 10px;
+    background: #ff0000;
+    border-radius: 50%;
+    margin-right: 8px;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { 
+        opacity: 1; 
+        transform: scale(1); 
+    }
+    50% { 
+        opacity: 0.3; 
+        transform: scale(1.2); 
+    }
+}
+
+.news-time {
+    font-weight: bold;
+    font-size: 1em;
+}

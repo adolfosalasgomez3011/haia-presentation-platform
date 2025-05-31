@@ -1,0 +1,68 @@
+<!-- SunCoke Executive Summary Styles -->
+<link rel="stylesheet" href="css/suncoke/executive-summary.css">
+
+<body data-company="suncoke">
+<div data-company="suncoke" class="executive-summary-container">
+  <div class="executive-layout">
+    <!-- Left side - Premium Clickable Cards -->
+    <div class="metrics-section">
+      <h2 class="section-title">Key Metrics</h2>
+      <div id="metrics-cards">
+        <!-- Cards will be populated by JavaScript -->
+      </div>
+    </div>
+    
+    <!-- Right side - Premium Image and Executive Summary -->
+    <div class="content-section">
+      <!-- Premium Image Section -->
+      <div class="image-container">
+        <div class="image-backdrop"></div>
+        <img src="img/suncokeenergy/suncoke_plant.jpg" alt="SunCoke Energy Plant" class="plant-image">
+      </div>
+      
+      <!-- Premium Executive Summary Section -->
+      <div class="executive-summary-box">
+        <div class="executive-gradient-border"></div>
+        
+        <h3 class="executive-title">
+          <span class="executive-icon">📊</span>
+          &nbsp;&nbsp;Executive Summary
+        </h3>
+        
+        <div id="executive-content">
+          <!-- Content will be populated by JavaScript -->
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Bottom Spacer -->
+  <div class="bottom-spacer"></div>
+</div>
+
+<!-- DEBUG: Test if script tags work -->
+<script>
+console.log('🔍 DEBUG: Script tags are working in this HTML file');
+console.log('🔍 DEBUG: About to load external JS file...');
+</script>
+
+<!-- TRY CORRECT PATH -->
+<script src="../../js/suncoke/executive-summary.js" 
+        onerror="console.error('❌ FAILED to load JS file from ../../js/suncoke/executive-summary.js')" 
+        onload="console.log('✅ JS file loaded successfully from ../../js/suncoke/executive-summary.js')"></script>
+
+<!-- DEBUG: Test after script -->
+<script>
+console.log('🔍 DEBUG: After external JS script tag');
+setTimeout(() => {
+  console.log('🔍 DEBUG: Checking if functions exist:', {
+    setDefaultExecutiveSummary: typeof window.setDefaultExecutiveSummary,
+    showCardDetails: typeof window.showCardDetails
+  });
+}, 500);
+</script>
+
+<!-- Data Timestamp -->
+<div class="data-timestamp" id="exec-timestamp">
+
+</div>

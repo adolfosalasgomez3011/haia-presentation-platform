@@ -1,0 +1,97 @@
+{
+  "company": {
+    "name": "TEINE Energy",
+    "date": "April 2024",
+    "logo_url": "img/teine-logo.png",
+    "year_founded": 2005,
+    "hq": "Calgary, Canada",
+    "industry": "Oil and Gas",
+    "ownership_type": "Privately Held",
+    "website": "https://teine-energy.com",
+    "ticker_symbol": "TENE",
+    "market_cap": 2100
+  },
+  "summary": "Teine is a low-cost operator with a focus on scalable, high-netback oil assets.",
+  "segments": [
+    {
+      "name": "Exploration",
+      "description": "Oil exploration in Viking, Bakken, and Duvernay plays."
+    }
+  ],
+  "financials": {
+    "revenue_2023": 14,
+    "ebitda_2023": 2.5,
+    "funding": 400,
+    "valuation": 77.59,
+    "operating_income": 2.5
+  },
+  "assets": [
+    {
+      "name": "Viking",
+      "production": "28,000 boe/d",
+      "land": "800,000 acres",
+      "region": "Saskatchewan",
+      "highlights": "Largest Viking producer"
+    }
+  ],
+  "strategy": {
+    "cost_efficiency": "Focus on low OPEX operations.",
+    "productivity": "Use of WatchDog for remote well monitoring.",
+    "recovery": "Enhanced oil recovery via waterflooding."
+  },
+  "esg": {
+    "emissions": "Virtual visits reduce field travel.",
+    "water": "Low water intensity assets.",
+    "rating_source": "Internal 2023",
+    "projects": "Carbon-aware operations in Viking.",
+    "environmental": 65,
+    "social": 72,
+    "governance": 78,
+    "overall": "B+"
+  },
+  "leadership": [
+    {
+      "name": "Jason Denney",
+      "role": "CEO",
+      "bio": "25 years in oil production.",
+      "past_roles": "Murphy Oil, EnCana"
+    }
+  ],
+  "quotes": [
+    {
+      "person": "Jason Denney",
+      "role": "CEO",
+      "text": "We're positioned for long-term profitability."
+    }
+  ],
+  "news": [
+    {
+      "date": "2024-04-01",
+      "headline": "Teine expands Duvernay asset footprint"
+    }
+  ],
+  "market": {
+    "tam": "$50B upstream oil",
+    "competitors": ["Whitecap", "Baytex"],
+    "differentiators": "CPP backing, asset concentration"
+  },
+  "risks": {
+    "market": "Oil price swings",
+    "regulatory": "Canadian emissions taxes",
+    "environment": "Methane leakage"
+  },
+  "contact": {
+    "email": "info@teine.com",
+    "phone": "+1-403-111-2222"
+  },
+  "closing_statement": "Thanks for your interest in Teine Energy.",
+  "investment": {
+    "recommendation": "Hold - Traditional Energy Producer",
+    "factors": [
+      "Stable oil production at 45,000 boe/d",
+      "Proven reserves portfolio",
+      "Energy sector volatility",
+      "ESG transition challenges"
+    ]
+  }
+}

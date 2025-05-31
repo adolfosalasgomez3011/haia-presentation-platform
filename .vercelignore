@@ -1,0 +1,11 @@
+MikaelChallenge/
+tools/
+agents/
+utils/
+config/
+*.psd
+*.eps
+*.ai
+*.zip
+.git/
+.cache/

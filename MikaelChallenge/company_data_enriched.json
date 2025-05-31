@@ -1,0 +1,45 @@
+{
+  "company": "SunCoke Energy",
+  "summary": "SunCoke Energy, Inc. operates as an independent producer of coke in the Americas and Brazil. It operates through three segments: Domestic Coke, Brazil Coke, and Logistics. It offers metallurgical and thermal coal. The company also provides export and domestic material handling and/or mixing services to steel, coke, electric utility, coal producing, and other manufacturing-based customers. In addition, it owns and operates cokemaking facilities in the United States and Brazil. SunCoke Energy, Inc. was founded in 1960 and is headquartered in Lisle, Illinois.",
+  "financials": {
+    "revenue": "$1,883,000,064",
+    "EBITDA": "$261,700,000",
+    "valuation": "$711,915,776"
+  },
+  "leadership": {
+    "CEO": {
+      "name": "Ms. Katherine T. Gates J.D.",
+      "background": "Basic Materials"
+    }
+  },
+  "strategy": {
+    "business_segments": [
+      {
+        "name": "Domestic Coke",
+        "description": "Produces high-quality coke primarily used in the steelmaking process."
+      },
+      {
+        "name": "Logistics",
+        "description": "Provides handling and mixing services for coal, coke, and other materials."
+      }
+    ],
+    "key_assets_regions": {
+      "regions": [
+        "United States",
+        "Brazil"
+      ],
+      "key_assets": [
+        "coke plants",
+        "coal handling facilities",
+        "logistics terminals"
+      ]
+    },
+    "sustainability": "SunCoke Energy focuses on reducing emissions, promoting safety, and supporting local communities through various sustainability initiatives.",
+    "market_risks": [
+      "Fluctuations in steel demand can impact the demand for coke.",
+      "Regulatory changes related to emissions and environmental policies could affect operations."
+    ]
+  },
+  "sector": "Basic Materials",
+  "industry": "Coking Coal"
+}

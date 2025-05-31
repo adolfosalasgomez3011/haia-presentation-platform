@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AutoGen API Test</title>
+    <style>
+        .card { 
+            padding: 20px; 
+            margin: 10px; 
+            border-radius: 10px; 
+            color: white; 
+            text-align: center;
+            min-width: 200px;
+            display: inline-block;
+        }
+        .card-value { font-size: 24px; font-weight: bold; }
+        .card-label { font-size: 14px; opacity: 0.9; }
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .container { display: flex; flex-wrap: wrap; }
+    </style>
+</head>
+<body>
+    <h1>🤖 AutoGen Financial Data Test</h1>
+    
+    <div class="container">
+        <div id="revenue" class="card" style="background: linear-gradient(135deg, #d72638, #e11d48);">
+            <div class="card-label">Total Sales</div>
+            <div class="card-value">Loading...</div>
+        </div>
+        
+        <div id="ebitda" class="card" style="background: linear-gradient(135deg, #f8961e, #f59e0b);">
+            <div class="card-label">EBITDA</div>
+            <div class="card-value">Loading...</div>
+        </div>
+        
+        <div id="market_cap" class="card" style="background: linear-gradient(135deg, #0e2f44, #1e3a8a);">
+            <div class="card-label">Market Cap</div>
+            <div class="card-value">Loading...</div>
+        </div>
+        
+        <div id="facilities" class="card" style="background: linear-gradient(135deg, #0e2f44, #1e3a8a);">
+            <div class="card-label">Facilities</div>
+            <div class="card-value">Loading...</div>
+        </div>
+        
+        <div id="logistics" class="card" style="background: linear-gradient(135deg, #2a9d8f, #0891b2);">
+            <div class="card-label">Logistics Volume</div>
+            <div class="card-value">Loading...</div>
+        </div>
+    </div>
+    
+    <p id="data-timestamp">Waiting for data...</p>
+    <button onclick="loadAutoGenData()">🔄 Refresh Data</button>
+    
+    <script src="autogen-data-loader.js"></script>
+</body>
+</html>

@@ -1,0 +1,397 @@
+<div class="financial-charts-slide" style="transform: translateY(-60px); margin-top: -40px; padding-top: 0;">
+    <!-- Simplified Header - Remove redundant title -->
+    <div class="slide-header" style="margin-top: -10px; padding-top: 0;">
+        <!-- New Title -->
+        <h1 class="slide-title">Private Company Metrics</h1>
+        <!-- Updated the subtitle -->
+        <div class="data-timestamp" id="charts-timestamp">Private company - No public trading data</div>
+    </div>
+
+    <!-- Charts Grid -->
+    <div class="charts-container">
+        <!-- Stock Price Chart -->
+        <div class="chart-card">
+            <h3 class="chart-title">🛢️ WTI Oil Price Trend (30 Days)</h3>
+            <canvas id="stockPriceChart" width="400" height="200"></canvas>
+            <div class="chart-info">
+                <span class="current-price" id="current-price">$0.00</span>
+                <span class="price-change" id="price-change">+0.00%</span>
+            </div>
+        </div>
+
+        <!-- Volume Chart -->
+        <div class="chart-card">
+            <h3 class="chart-title">⛽ Natural Gas Prices</h3>
+            <canvas id="volumeChart" width="400" height="200"></canvas>
+            <div class="chart-info">
+                <span class="avg-volume" id="avg-volume">Avg Volume: 0</span>
+            </div>
+        </div>
+
+        <!-- Financial Metrics Chart -->
+        <div class="chart-card">
+            <h3 class="chart-title">📊 Production Metrics</h3>
+            <canvas id="metricsChart" width="400" height="200"></canvas>
+            <div class="chart-info">
+                <span class="pe-ratio" id="pe-ratio">Production: 46K boe/d</span>
+                <span class="dividend-yield" id="dividend-yield">ESG Score: 73/100</span>
+            </div>
+        </div>
+
+        <!-- Market Cap & Revenue Comparison -->
+        <div class="chart-card">
+            <h3 class="chart-title">🏢 Private Company Valuation</h3>
+            <canvas id="companyMetricsChart" width="400" height="200"></canvas>
+            <div class="chart-info">
+                <span class="market-cap" id="market-cap-display">Status: Private Company</span>
+                <span class="revenue" id="revenue-display">Revenue: ~$1.3B*</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Real-time Data Panel -->
+    <div class="realtime-panel">
+        <!-- Update the real-time panel title -->
+        <h3><span class="hatch-red-indicator">🔴</span> Live Market Data</h3>
+        <div class="realtime-grid">
+            <div class="realtime-item">
+                <span class="label">WTI Oil Price:</span>
+                <span class="value" id="live-price">$78.50</span>
+            </div>
+            <div class="realtime-item">
+                <span class="label">Natural Gas:</span>
+                <span class="value" id="day-range">$3.25/MMBtu</span>
+            </div>
+            <div class="realtime-item">
+                <span class="label">Production:</span>
+                <span class="value" id="week-range">46,000 boe/d</span>
+            </div>
+            <div class="realtime-item">
+                <span class="label">ESG Score:</span>
+                <span class="value" id="live-volume">73/100</span>
+            </div>
+            <div class="realtime-item">
+                <span class="label">Company Status:</span>
+                <span class="value" id="market-state">Private</span>
+            </div>
+            <div class="realtime-item">
+                <span class="label">Last Update:</span>
+                <span class="value" id="last-update">Live</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="action-buttons">
+        <button class="refresh-btn" onclick="refreshFinancialCharts()">🔄 Refresh Charts</button>
+        <button class="export-btn" onclick="exportChartsData()">📊 Export Data</button>
+        <button class="autogen-btn" onclick="refreshExecutiveSummary()">🤖 Update AutoGen</button>
+    </div>
+</div>
+
+<style>
+/* Authentic Teine Corporate Colors */
+:root {
+  --hatch-primary: #3b82f6;    /* Teine Orange */
+  --hatch-secondary: #1e40af;  /* Teine Red-Orange */
+  --hatch-accent: #60a5fa;     /* Teine Light Orange */
+  --hatch-dark: #BF360C;       /* Teine Dark Red */
+  --hatch-gradient: linear-gradient(135deg, #3b82f6 0%, #1e40af 50%, #BF360C 100%);
+  --hatch-light-gradient: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+}
+
+.financial-charts-slide {
+    padding: 0px 20px 150px 20px; /* ZERO top padding - start at absolute top */
+    min-height: calc(100vh + 300px);
+    background: transparent !important;
+    color: white;
+    overflow-y: auto;
+    margin-top: -20px; /* Pull content even higher with negative margin */
+}
+
+.slide-header {
+    text-align: center;
+    margin-bottom: 8px; /* Minimal margin */
+    background: rgba(255,255,255,0.1);
+    border-radius: 8px; /* Smaller radius */
+    padding: 6px; /* Minimal padding */
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
+    margin-top: 0; /* Ensure no top margin */
+}
+
+.slide-title {
+    font-size: 1.5em; /* Larger title */
+    margin: 0 0 4px 0; /* Minimal margin */
+    color: rgba(255,255,255,0.95);
+    font-weight: 700;
+}
+
+.slide-subtitle {
+    font-size: 1em; /* Even smaller text */
+    opacity: 0.9;
+    margin: 0 0 4px 0; /* Minimal margin */
+    color: rgba(255,255,255,0.95);
+    font-weight: 500;
+}
+
+.data-timestamp {
+    background: rgba(255,255,255,0.2);
+    padding: 2px 8px; /* Minimal padding */
+    border-radius: 12px; /* Smaller radius */
+    display: inline-block;
+    font-size: 0.75em; /* Even smaller text */
+    color: white;
+    border: 1px solid rgba(255,255,255,0.3);
+}
+
+.charts-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px; /* Minimal gap */
+    margin-bottom: 8px; /* Minimal margin */
+    padding: 0 5px; /* Minimal side padding */
+    margin-top: 0; /* Ensure no top margin */
+}
+
+.chart-card {
+    background: rgba(255,255,255,0.95);
+    border-radius: 10px; /* Smaller radius */
+    padding: 12px; /* Minimal padding */
+    color: #333;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
+    margin-bottom: 5px; /* Minimal margin */
+}
+
+.chart-title {
+    margin: 0 0 5px 0; /* Minimal margin */
+    font-size: 1em; /* Smaller text */
+    color: #2c3e50;
+    text-align: center;
+}
+
+.chart-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4px; /* Minimal margin */
+    font-weight: bold;
+    font-size: 0.85em; /* Smaller text */
+}
+
+.current-price {
+    color: #27ae60;
+    font-size: 1.05em; /* Smaller */
+}
+
+.price-change.positive {
+    color: #27ae60;
+}
+
+.price-change.negative {
+    color: #e74c3c;
+}
+
+.realtime-panel {
+    background: rgba(255,255,255,0.1);
+    border-radius: 10px; /* Smaller radius */
+    padding: 10px; /* Minimal padding */
+    margin: 8px 5px 15px 5px; /* Minimal margins */
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.realtime-panel h3 {
+    margin: 0 0 6px 0; /* Minimal margin */
+    font-size: 1.1em; /* Smaller text */
+}
+
+.realtime-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px; /* Minimal gap */
+    margin-top: 6px; /* Minimal margin */
+}
+
+.realtime-item {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.realtime-item .label {
+    font-size: 0.8em; /* Smaller text */
+    opacity: 0.8;
+    margin-bottom: 3px; /* Smaller margin */
+}
+
+.realtime-item .value {
+    font-weight: bold;
+    font-size: 1em; /* Smaller text */
+    color: #f39c12;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 8px; /* Minimal gap */
+    margin: 10px 0 80px 0; /* Minimal top margin */
+    padding-bottom: 50px;
+}
+
+.action-buttons button {
+    background: var(--hatch-light-gradient) !important;
+    color: white;
+    border: none;
+    padding: 8px 16px; /* Smaller padding */
+    border-radius: 20px; /* Smaller radius */
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.85em; /* Smaller text */
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.2);
+}
+
+.action-buttons button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 18px rgba(0,0,0,0.3);
+    background: var(--hatch-gradient) !important;
+}
+
+.refresh-btn { background: linear-gradient(135deg, #4CAF50, #66BB6A) !important; }
+.export-btn { background: linear-gradient(135deg, #FF9800, #F57C00) !important; }
+.autogen-btn { background: var(--hatch-gradient) !important; }
+
+/* Enhanced mobile layout */
+@media (max-width: 768px) {
+    .financial-charts-slide {
+        padding: 5px 10px 200px 10px; /* Very compact on mobile */
+    }
+    
+    .charts-container {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding: 0 5px;
+    }
+    
+    .realtime-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+    
+    .slide-header {
+        padding: 8px;
+        margin-bottom: 12px;
+    }
+    
+    .chart-card {
+        padding: 12px;
+    }
+}
+
+/* Ensure charts have proper canvas sizing */
+canvas {
+    max-width: 100% !important;
+    height: auto !important;
+}
+
+/* Add subtle animation when charts load */
+.chart-card {
+    animation: slideInUp 0.5s ease-out;
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Stagger the animation for each chart */
+.chart-card:nth-child(1) { animation-delay: 0.1s; }
+.chart-card:nth-child(2) { animation-delay: 0.2s; }
+.chart-card:nth-child(3) { animation-delay: 0.3s; }
+.chart-card:nth-child(4) { animation-delay: 0.4s; }
+
+/* Force Teine Red Color Overrides - Higher Specificity */
+.slide-subtitle span[style*="color: #1e40af"] {
+    color: #1e40af !important;
+}
+
+.realtime-panel h3 span[style*="color: #1e40af"] {
+    color: #1e40af !important;
+}
+
+/* Override any existing red colors with Teine red */
+.financial-charts-slide .slide-subtitle span,
+.financial-charts-slide .realtime-panel h3 span {
+    color: #1e40af !important;
+}
+
+/* Ensure red dots use Teine color */
+span[style*="color: #1e40af"] {
+    color: #1e40af !important;
+    font-weight: bold !important;
+}
+
+/* Override any theme colors that might be interfering */
+.reveal .slides section span {
+    color: inherit !important;
+}
+
+.reveal .slides section .slide-subtitle span {
+    color: #1e40af !important;
+}
+
+.reveal .slides section .realtime-panel h3 span {
+    color: #1e40af !important;
+}
+
+/* Teine Red Indicator Class - Highest Priority */
+.hatch-red-indicator {
+    color: #1e40af !important;
+    font-weight: bold !important;
+    text-shadow: 0 0 2px rgba(216, 67, 21, 0.5) !important;
+}
+
+/* Backup using CSS variables */
+:root {
+  --hatch-red: #1e40af !important;
+}
+
+.hatch-red-indicator {
+    color: var(--hatch-red) !important;
+}
+
+/* Force override any reveal.js theme colors */
+.reveal .slides section .hatch-red-indicator,
+.reveal .slides section.present .hatch-red-indicator,
+.reveal .slides section.future .hatch-red-indicator,
+.reveal .slides section.past .hatch-red-indicator {
+    color: #1e40af !important;
+}
+</style>
+
+<!-- To this (check if the file exists): -->
+<script src="../../js/teine/teine-financial-charts.js"></script>
+<script>
+console.log('📊 Financial Charts slide loaded');
+
+// Call the function that's now globally available
+if (typeof updateOilPriceFromLiveData === 'function') {
+    console.log('📊 Calling oil price update function...');
+    updateOilPriceFromLiveData();
+} else {
+    console.log('⏳ Waiting for global function to be available...');
+    setTimeout(() => {
+        if (typeof updateOilPriceFromLiveData === 'function') {
+            updateOilPriceFromLiveData();
+        }
+    }, 1000);
+}
+</script>

@@ -1,0 +1,478 @@
+<div class="market-statistics-slide">
+    <!-- 1. LIVE OIL & GAS INDUSTRY HEALTH -->
+    <div class="industry-health-section">
+        <h2><span class="hatch-icon">🛢️</span> Live Oil & Gas Industry Health</h2>
+        <div class="health-metrics-grid">
+            <div class="health-card">
+                <h3>🛢️ Oil Production</h3>
+                <p class="metric-value" id="oil-production">45.7K boe/d</p>
+                <div class="metric-change positive" id="production-change">+3.2% YoY</div>
+                <div class="metric-detail">Daily average</div>
+            </div>
+            <div class="health-card">
+                <h3>🏭 Well Efficiency</h3>
+                <p class="metric-value" id="well-efficiency">87.3%</p>
+                <div class="metric-change positive" id="efficiency-change">+2.1% vs Q3</div>
+                <div class="metric-detail">Production efficiency</div>
+            </div>
+            <div class="health-card">
+                <h3>📈 Industry Benchmark</h3>
+                <p class="metric-value" id="industry-benchmark">Above Avg</p>
+                <div class="metric-change positive" id="benchmark-performance">+8.2% vs peers</div>
+                <div class="metric-detail">Private company performance</div>
+            </div>
+            <div class="health-card">
+                <h3>🔥 Oil Demand Index</h3>
+                <p class="metric-value" id="oil-demand">102.5</p>
+                <div class="metric-change positive" id="demand-change">+4.2%</div>
+                <div class="metric-detail">Industry index</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. ENERGY COMMODITY PRICING -->
+    <div class="commodity-section">
+        <h2><span class="hatch-icon">📈</span> Energy Commodity Pricing (12-Month)</h2>
+        <div class="commodity-grid">
+            <div class="commodity-panel">
+                <h3>🛢️ WTI Oil Price</h3>
+                <div class="price-display">
+                    <span class="current-price" id="wti-oil-price">$78.50/bbl</span>
+                    <span class="price-change positive" id="oil-price-change">+12.3%</span>
+                </div>
+                <div class="price-trend">
+                    <div class="mini-chart" id="oil-trend">📈 Strong recovery trend</div>
+                </div>
+            </div>
+            <div class="commodity-panel">
+                <h3>⛽ Natural Gas</h3>
+                <div class="price-display">
+                    <span class="current-price" id="gas-price">$3.25/MMBtu</span>
+                    <span class="price-change negative" id="gas-change">-5.2%</span>
+                </div>
+                <div class="price-trend">
+                    <div class="mini-chart" id="gas-trend">📉 Seasonal decline</div>
+                </div>
+            </div>
+            <div class="commodity-panel">
+                <h3>🔥 Energy Futures</h3>
+                <div class="price-display">
+                    <span class="current-price" id="futures-price">$82.10/bbl</span>
+                    <span class="price-change positive" id="futures-change">+8.7%</span>
+                </div>
+                <div class="price-trend">
+                    <div class="mini-chart" id="futures-trend">📈 Bullish outlook</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3. OIL & GAS COMPETITIVE LANDSCAPE -->
+    <div class="competitive-section">
+        <div class="competitive-grid">
+            <div class="market-share-panel">
+                <h3><span class="hatch-icon">🎯</span> Market Position</h3>
+                <div class="market-metrics">
+                    <div class="market-item">
+                        <span class="market-label">Canadian Market Share</span>
+                        <span class="market-value highlight">1.8%</span>
+                    </div>
+                    <div class="market-item">
+                        <span class="market-label">Production Capacity</span>
+                        <span class="market-value">45K boe/d</span>
+                    </div>
+                    <div class="market-item">
+                        <span class="market-label">Capacity Utilization</span>
+                        <span class="market-value positive">92.1%</span>
+                    </div>
+                    <div class="market-item">
+                        <span class="market-label">Production Focus</span>
+                        <span class="market-value">Oil & Gas</span>
+                    </div>
+                    <div class="market-item">
+                        <span class="market-label">Daily Production</span>
+                        <span class="market-value">45K boe/d</span>
+                    </div>
+                    <div class="market-item">
+                        <span class="market-label">Market Position</span>
+                        <span class="market-value positive">Growing</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="competitor-panel">
+                <h3>🏆 Industry Peer Analysis</h3>
+                <div class="competitor-list">
+                    <div class="competitor-item">
+                        <span class="competitor-name">Suncor Energy</span>
+                        <span class="competitor-share">22.4%</span>
+                        <span class="competitor-trend">📈 +1.2%</span>
+                    </div>
+                    <div class="competitor-item highlight">
+                        <span class="competitor-name">TEINE Energy</span>
+                        <span class="competitor-share">1.8%</span>
+                        <span class="competitor-trend">📈 +3.1%</span>
+                    </div>
+                    <div class="competitor-item">
+                        <span class="competitor-name">Canadian Natural</span>
+                        <span class="competitor-share">18.7%</span>
+                        <span class="competitor-trend">📊 +0.8%</span>
+                    </div>
+                    <div class="competitor-item">
+                        <span class="competitor-name">Imperial Oil</span>
+                        <span class="competitor-share">14.2%</span>
+                        <span class="competitor-trend">📈 +0.5%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 4. ENERGY REGULATORY & ENVIRONMENTAL -->
+    <div class="regulatory-section">
+        <h2><span class="hatch-icon">🌿</span> Regulatory Compliance & ESG Performance</h2>
+        <div class="regulatory-grid">
+            <div class="regulatory-card">
+                <h3>💨 Carbon Tax Impact</h3>
+                <p class="metric-value" id="carbon-price">$65/ton CO₂</p>
+                <div class="metric-change positive" id="carbon-change">Current Rate</div>
+                <div class="metric-detail">Canadian federal tax</div>
+            </div>
+            <div class="regulatory-card">
+                <h3>🌱 ESG Compliance</h3>
+                <p class="metric-value" id="esg-compliance">$28M annually</p>
+                <div class="metric-change neutral" id="compliance-change">+5.1%</div>
+                <div class="metric-detail">Environmental programs</div>
+            </div>
+            <div class="regulatory-card">
+                <h3>⚡ Energy Transition</h3>
+                <p class="metric-value" id="transition-impact">15% exposure</p>
+                <div class="metric-change negative" id="transition-change">-2.1%</div>
+                <div class="metric-detail">Clean energy transition</div>
+            </div>
+            <div class="regulatory-card">
+                <h3>📋 ESG Rating</h3>
+                <p class="metric-value" id="esg-rating">B+ Grade</p>
+                <div class="metric-change positive" id="esg-change">Improved</div>
+                <div class="metric-detail">Overall ESG performance</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+/* Hatch Corporate Colors */
+:root {
+  --hatch-primary: #3b82f6;
+  --hatch-secondary: #1e40af;
+  --hatch-accent: #FF8A65;
+  --hatch-dark: #BF360C;
+}
+
+.market-statistics-slide {
+    padding: 10px 20px 150px 20px !important; /* Increased bottom padding from 80px to 150px */
+    color: white;
+    min-height: auto;
+}
+
+/* Section spacing with much more room */
+.industry-health-section {
+    margin: 15px 0 25px 0 !important; /* Much more space */
+}
+
+.commodity-section {
+    margin: 25px 0 25px 0 !important; /* Much more space */
+}
+
+.competitive-section {
+    margin: 25px 0 25px 0 !important; /* Much more space */
+}
+
+.regulatory-section {
+    margin: 25px 0 80px 0 !important; /* Increased bottom margin from 60px to 80px */
+}
+
+/* Grid spacing with bigger gaps */
+.health-metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px !important; /* Increased from 15px to 25px */
+    margin: 15px 0 25px 0 !important; /* Much more margin */
+}
+
+.commodity-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px !important; /* Increased from 30px to 35px */
+    margin: 15px 0 25px 0 !important; /* Much more margin */
+}
+
+.competitive-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px !important; /* Increased from 30px to 35px */
+    margin: 15px 0 25px 0 !important; /* Much more margin */
+}
+
+.regulatory-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px !important; /* Increased from 20px to 25px */
+    margin: 15px 0 80px 0 !important; /* Increased bottom margin from 60px to 80px */
+}
+
+/* Card spacing with proper padding and margins */
+.health-card {
+    background: rgba(255,255,255,0.95);
+    padding: 20px !important; /* Increased padding */
+    border-radius: 12px;
+    text-align: center;
+    color: #333;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
+    transition: transform 0.3s ease;
+    min-height: 160px !important; /* Set minimum height */
+    margin: 5px 0 !important; /* Add margin between cards */
+}
+
+.commodity-panel {
+    background: rgba(255,255,255,0.95);
+    padding: 22px !important; /* Increased padding */
+    border-radius: 15px;
+    color: #333;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.1);
+    backdrop-filter: blur(10px);
+    border-left: 4px solid var(--hatch-primary);
+    min-height: 180px !important; /* Increased minimum height */
+    max-width: 100%;
+    margin: 5px 0 15px 0 !important; /* Add margin between cards */
+}
+
+.market-share-panel,
+.competitor-panel {
+    background: rgba(255,255,255,0.95);
+    padding: 22px !important; /* Increased padding */
+    border-radius: 15px;
+    color: #333;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.3);
+    min-height: 240px !important; /* Increased minimum height */
+    max-width: 100%;
+    margin: 5px 0 15px 0 !important; /* Add margin between cards */
+}
+
+.regulatory-card {
+    background: rgba(255,255,255,0.95);
+    padding: 20px !important; /* Increased padding */
+    border-radius: 12px;
+    text-align: center;
+    color: #333;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
+    transition: transform 0.3s ease;
+    min-height: 160px !important; /* Set minimum height */
+    margin: 5px 0 !important; /* Add margin between cards */
+}
+
+/* Section Headers - Much more space */
+.industry-health-section h2,
+.commodity-section h2,
+.regulatory-section h2 {
+    color: var(--hatch-accent);
+    font-size: 1.4em;
+    margin: 20px 0 15px 0 !important; /* Increased top margin */
+    padding: 10px 0 !important; /* Added padding */
+    text-align: center;
+}
+
+/* Competitive section headers (h3) - More spacing */
+.market-share-panel h3,
+.competitor-panel h3 {
+    color: var(--hatch-secondary);
+    margin: 10px 0 18px 0 !important; /* Increased margins */
+    padding: 5px 0 !important; /* Added padding */
+    font-size: 1.2em;
+    text-align: center;
+}
+
+/* Internal card element spacing */
+.health-card h3 {
+    font-size: 1.1em;
+    margin: 0 0 12px 0 !important; /* Add margin */
+    color: #2c3e50;
+    padding: 5px 0 !important; /* Add padding */
+}
+
+.health-card .metric-value {
+    font-size: 1.6em;
+    font-weight: bold;
+    margin: 12px 0 !important; /* Increased margin */
+    color: var(--hatch-primary);
+    padding: 5px 0 !important; /* Add padding */
+}
+
+.metric-change {
+    font-size: 0.9em;
+    font-weight: bold;
+    padding: 6px 10px !important; /* Increased padding */
+    border-radius: 15px;
+    margin: 8px 0 !important; /* Increased margin */
+}
+
+.metric-detail {
+    font-size: 0.8em;
+    color: #666;
+    margin: 8px 0 0 0 !important; /* Increased margin */
+    padding: 3px 0 !important; /* Add padding */
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .commodity-grid {
+        grid-template-columns: 1fr; /* Stack commodity cards vertically on tablets */
+        gap: 20px;
+    }
+    
+    .competitive-grid {
+        grid-template-columns: 1fr; /* Stack competitive cards vertically on tablets */
+        gap: 20px;
+    }
+    
+    .health-metrics-grid,
+    .regulatory-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .health-metrics-grid,
+    .regulatory-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    
+    .market-statistics-slide {
+        padding: 5px 10px 120px 10px; /* Increased bottom padding from 100px to 120px */
+    }
+    
+    .commodity-panel,
+    .market-share-panel,
+    .competitor-panel {
+        padding: 15px;
+    }
+    
+    .regulatory-section {
+        margin: 25px 0 60px 0 !important; /* Extra bottom margin on mobile */
+    }
+}
+
+/* Animation for cards */
+.health-card,
+.regulatory-card {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.health-card:nth-child(1) { animation-delay: 0.1s; }
+.health-card:nth-child(2) { animation-delay: 0.2s; }
+.health-card:nth-child(3) { animation-delay: 0.3s; }
+.health-card:nth-child(4) { animation-delay: 0.4s; }
+</style>
+
+<script>
+// Enhanced Market Statistics Manager with Live Data
+window.marketStatisticsManager = {
+    init: function() {
+        console.log('📊 Market Statistics initialized with Master Data Integrator');
+        this.loadIntegratedData();
+        this.startDataRefresh();
+    },
+
+    async loadIntegratedData() {
+        console.log('📡 Loading data from Master Data Integrator...');
+        
+        try {
+            // Use your existing LiveDataLoader instead
+            if (window.liveDataLoader) {
+                await window.liveDataLoader.loadData();
+                const integratedData = window.liveDataLoader.data;
+                
+                if (integratedData) {
+                    console.log('✅ Integrated data loaded:', integratedData);
+                    this.updateMetricsFromIntegrator(integratedData);
+                } else {
+                    throw new Error('No integrated data available');
+                }
+            } else {
+                throw new Error('LiveDataLoader not available');
+            }
+            
+        } catch (error) {
+            console.error('❌ Error loading integrated data:', error);
+            this.loadFallbackData();
+        }
+    },
+
+    updateMetricsFromIntegrator(integratedData) {
+        const steel = integratedData.integrated_data?.fred_steel || {};
+        const commodity = integratedData.integrated_data?.commodity_prices || {};
+        
+        // Renewable Energy Health from your Master Data Integrator
+        this.updateElement('steel-production', steel.steel_production || 'N/A');
+        this.updateElement('steel-change', steel.steel_change || 'N/A');
+        
+        // Commodity Pricing from your Master Data Integrator  
+        this.updateElement('met-coal-price', commodity.wti_oil_price || 'N/A');
+        this.updateElement('steel-etf', commodity.steel_etf_price || 'N/A');
+        
+        // ETF Performance calculations
+        if (commodity.steel_etf_change) {
+            this.updateElement('etf-performance', `SLX: ${commodity.steel_etf_change}`);
+        }
+        
+        console.log('📊 All metrics updated from Master Data Integrator');
+    },
+
+    // ADD MISSING FUNCTIONS:
+    updateElement(elementId, value) {
+        const element = document.getElementById(elementId);
+        if (element && value !== undefined) {
+            element.textContent = value;
+        }
+    },
+
+    loadFallbackData() {
+        console.log('🔄 Loading fallback data...');
+        // Keep existing fallback data if needed
+    },
+
+    startDataRefresh() {
+        // Refresh data every 5 minutes
+        setInterval(() => {
+            this.loadIntegratedData();
+        }, 300000);
+        
+        console.log('⏰ Auto-refresh scheduled every 5 minutes');
+    },
+
+    // Public method for manual refresh
+    refresh() {
+        console.log('🔄 Manual refresh triggered...');
+        this.loadIntegratedData();
+    }
+};
+</script>

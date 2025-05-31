@@ -1,0 +1,88 @@
+{
+  "company": {
+    "name": "Nutrien Ltd.",
+    "date": "April 2024",
+    "logo_url": "img/nutrien-logo.png",
+    "year_founded": 2018,
+    "hq": "Saskatoon, Canada",
+    "industry": "Agriculture & Chemicals",
+    "ownership_type": "Public",
+    "website": "https://www.nutrien.com",
+    "ticker_symbol": "NTR",
+    "market_cap": 38
+  },
+  "summary": "Nutrien is the world's largest crop input company with global retail and mining operations.",
+  "segments": [
+    {
+      "name": "Retail",
+      "description": "Crop input sales via 2000+ locations."
+    },
+    {
+      "name": "Potash",
+      "description": "World’s largest potash producer."
+    }
+  ],
+  "financials": {
+    "revenue_2023": 27000,
+    "ebitda_2023": 6100,
+    "funding": 0,
+    "valuation": 38000,
+    "operating_income": 1300
+  },
+  "assets": [
+    {
+      "name": "Potash Mines",
+      "production": "20.6Mt capacity",
+      "land": "Multiple Saskatchewan sites",
+      "region": "North America",
+      "highlights": "Global leader in soft rock mining"
+    }
+  ],
+  "strategy": {
+    "cost_efficiency": "Centralized logistics and rail fleet.",
+    "productivity": "Autonomous mining and proprietary products.",
+    "recovery": "Digital tools for soil nutrient optimization."
+  },
+  "esg": {
+    "emissions": "Blue ammonia investment cuts CO2 by 90%.",
+    "water": "Efficient use in phosphate processing.",
+    "rating_source": "ESG Risk Ratings, Sustainalytics",
+    "projects": "Low-carbon fertilizer platforms."
+  },
+  "leadership": [
+    {
+      "name": "Ken Seitz",
+      "role": "CEO",
+      "bio": "Former PotashCorp executive.",
+      "past_roles": "PotashCorp, Mosaic"
+    }
+  ],
+  "quotes": [
+    {
+      "person": "Ken Seitz",
+      "role": "CEO",
+      "text": "We're building the future of sustainable agriculture."
+    }
+  ],
+  "news": [
+    {
+      "date": "2024-04-12",
+      "headline": "Nutrien expands low-carbon ammonia output"
+    }
+  ],
+  "market": {
+    "tam": "$200B global agri-inputs",
+    "competitors": ["Yara", "Mosaic", "ICL"],
+    "differentiators": "Scale, proprietary products, global retail"
+  },
+  "risks": {
+    "market": "Fertilizer price cycles",
+    "regulatory": "Carbon legislation",
+    "environment": "Mining tailings management"
+  },
+  "contact": {
+    "email": "info@nutrien.com",
+    "phone": "+1-306-123-4567"
+  },
+  "closing_statement": "Feeding the Future. Responsibly."
+}

@@ -1,0 +1,195 @@
+/**
+ * Company-Specific Theme Styling
+ * Multi-company presentation themes
+ */
+
+/* =================================
+   SUNCOKE ENERGY THEME (Orange)
+   ================================= */
+
+.reveal[data-company="suncoke"] .metric-card {
+    background: linear-gradient(135deg, #ff6b35, #e55a2b);
+    border-left: 4px solid #cc4a22;
+    color: white;
+}
+
+.reveal[data-company="suncoke"] .progress-fill {
+    background: #ff6b35;
+}
+
+.reveal[data-company="suncoke"] .highlight {
+    color: #ff6b35;
+}
+
+.reveal[data-company="suncoke"] .metric-value {
+    color: #cc4a22;
+    font-weight: bold;
+}
+
+.reveal[data-company="suncoke"] .metric-change {
+    color: #ff6b35;
+}
+
+.reveal[data-company="suncoke"] .chart-container {
+    border: 2px solid #ff6b35;
+}
+
+.reveal[data-company="suncoke"] .company-header {
+    background: linear-gradient(135deg, #ff6b35, #cc4a22);
+    color: white;
+}
+
+.reveal[data-company="suncoke"] .progress-bar {
+    background-color: #fff0ec;
+}
+
+.reveal[data-company="suncoke"] .progress-bar .progress-fill {
+    background: linear-gradient(90deg, #ff6b35, #e55a2b);
+}
+
+/* =================================
+   TEINE ENERGY THEME (Light Blue)
+   ================================= */
+
+.reveal[data-company="teine"] .metric-card {
+    background: linear-gradient(135deg, #4a90e2, #357abd);
+    border-left: 4px solid #2c5aa0;
+    color: white;
+    box-shadow: 0 4px 15px rgba(74, 144, 226, 0.3);
+}
+
+.reveal[data-company="teine"] .progress-fill {
+    background: #4a90e2;
+}
+
+.reveal[data-company="teine"] .highlight {
+    color: #4a90e2;
+}
+
+.reveal[data-company="teine"] .metric-value {
+    color: #2c5aa0;
+    font-weight: bold;
+}
+
+.reveal[data-company="teine"] .metric-change {
+    color: #4a90e2;
+}
+
+.reveal[data-company="teine"] .metric-change.positive {
+    color: #27ae60;
+}
+
+.reveal[data-company="teine"] .metric-change.negative {
+    color: #e74c3c;
+}
+
+.reveal[data-company="teine"] .chart-container {
+    border: 2px solid #4a90e2;
+    border-radius: 8px;
+}
+
+.reveal[data-company="teine"] .company-header {
+    background: linear-gradient(135deg, #4a90e2, #2c5aa0);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.reveal[data-company="teine"] .progress-bar {
+    background-color: #e3f2fd;
+    border-radius: 6px;
+}
+
+.reveal[data-company="teine"] .progress-bar .progress-fill {
+    background: linear-gradient(90deg, #4a90e2, #357abd);
+    border-radius: 6px;
+}
+
+/* Override any existing orange styling for Teine */
+.reveal[data-company="teine"] .metric-card.suncoke-orange {
+    background: linear-gradient(135deg, #4a90e2, #357abd) !important;
+    border-left: 4px solid #2c5aa0 !important;
+}
+
+/* Oil & Gas specific styling for Teine */
+.reveal[data-company="teine"] .oil-price-card {
+    background: linear-gradient(135deg, #2980b9, #3498db);
+    border-left: 4px solid #1f4e79;
+}
+
+.reveal[data-company="teine"] .production-card {
+    background: linear-gradient(135deg, #16a085, #1abc9c);
+    border-left: 4px solid #138d75;
+}
+
+.reveal[data-company="teine"] .esg-card {
+    background: linear-gradient(135deg, #27ae60, #2ecc71);
+    border-left: 4px solid #1e8449;
+}
+
+/* =================================
+   SHARED COMPANY STYLING
+   ================================= */
+
+.metric-card {
+    transition: all 0.3s ease;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 8px;
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.metric-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.company-header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.company-header .subtitle {
+    font-size: 1.2em;
+    opacity: 0.9;
+    margin-top: 10px;
+}
+
+/* Loading states */
+.loading {
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.6; }
+    100% { opacity: 1; }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .metrics-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .metric-card {
+        min-height: 100px;
+        padding: 15px;
+    }
+    
+    .company-header h1 {
+        font-size: 2em;
+    }
+}

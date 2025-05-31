@@ -1,0 +1,123 @@
+<div class="live-news-tv-slide">
+    <!-- News Header -->
+    <div id="news-header-container">
+        <div class="news-header-bar">
+            <div class="news-logo">
+                <span class="logo-icon">📺</span>
+                <span class="logo-text">TEINE ENERGY</span>
+            </div>
+            <div class="live-indicator">
+                <span class="live-dot"></span>
+                <span>LIVE</span>
+            </div>
+            <div class="news-time" id="current-time">12:34 PM EST</div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div id="main-content-container">
+        <div class="main-chart-section">
+            <div class="chart-header">
+                <h3>📊 LIVE MARKET ANALYSIS</h3>
+                <div class="chart-controls">
+                    <button class="chart-btn active" onclick="updateChartType('oil')">WTI Oil Price</button>
+                    <button class="chart-btn" onclick="updateChartType('gas')">Natural Gas</button>
+                    <button class="chart-btn" onclick="updateChartType('energy')">Energy Sector</button>
+                </div>
+            </div>
+            
+            <div class="chart-display">
+                <svg width="100%" height="300" viewBox="0 0 600 300">
+                    <defs>
+                        <pattern id="grid" width="60" height="30" patternUnits="userSpaceOnUse">
+                            <path d="M 60 0 L 0 0 0 30" fill="none" stroke="rgba(255,215,0,0.3)" stroke-width="1"/>
+                        </pattern>
+                    </defs>
+                    <rect width="100%" height="100%" fill="url(#grid)" />
+                    
+                    <polyline id="chart-line" 
+                        points="50,250 100,220 150,190 200,170 250,150 300,140 350,130 400,120 450,110 500,100 550,90"
+                        fill="none" stroke="#00ff00" stroke-width="4"
+                        style="filter: drop-shadow(0 0 10px #00ff00);">
+                    </polyline>
+                    
+                    <!-- Chart data points -->
+                    <circle cx="50" cy="250" r="5" fill="#ffd700" style="filter: drop-shadow(0 0 5px #ffd700);"/>
+                    <circle cx="100" cy="220" r="5" fill="#ffd700" style="filter: drop-shadow(0 0 5px #ffd700);"/>
+                    <circle cx="150" cy="190" r="5" fill="#ffd700" style="filter: drop-shadow(0 0 5px #ffd700);"/>
+                    <circle cx="200" cy="170" r="5" fill="#ffd700" style="filter: drop-shadow(0 0 5px #ffd700);"/>
+                    <circle cx="250" cy="150" r="5" fill="#ffd700" style="filter: drop-shadow(0 0 5px #ffd700);"/>
+                    <circle cx="300" cy="140" r="5" fill="#ffd700" style="filter: drop-shadow(0 0 5px #ffd700);"/>
+                    <circle cx="350" cy="130" r="5" fill="#ffd700" style="filter: drop-shadow(0 0 5px #ffd700);"/>
+                    <circle cx="400" cy="120" r="5" fill="#ffd700" style="filter: drop-shadow(0 0 5px #ffd700);"/>
+                    <circle cx="450" cy="110" r="5" fill="#ffd700" style="filter: drop-shadow(0 0 5px #ffd700);"/>
+                    <circle cx="500" cy="100" r="5" fill="#ffd700" style="filter: drop-shadow(0 0 5px #ffd700);"/>
+                    <circle cx="550" cy="90" r="5" fill="#ffd700" style="filter: drop-shadow(0 0 5px #ffd700);"/>
+                    
+                    <text x="60" y="30" fill="#ffd700" font-size="18" font-weight="bold" id="chart-title">📊 WTI Oil Price ($/bbl)</text>
+                    <text x="520" y="290" fill="#ccc" font-size="14">Time →</text>
+                    <text x="420" y="50" fill="#ffffff" font-size="20" font-weight="bold" id="current-value">Current: $78.50</text>
+                </svg>
+            </div>
+        </div>
+
+        <!-- Live Data Feed -->
+        <div class="data-feed-section">
+            <div class="data-grid">
+                <div class="data-card">
+                    <span class="data-label">Oil Production</span>
+                    <span class="data-value" id="tene-production">45.0K boe/d</span>
+                </div>
+                <div class="data-card">
+                    <span class="data-label">WTI Oil Price</span>
+                    <span class="data-value" id="oil-price">$78.50</span>
+                    <span class="data-change positive" id="oil-change">+1.8%</span>
+                </div>
+                <div class="data-card">
+                    <span class="data-label">Natural Gas</span>
+                    <span class="data-value" id="gas-price">$3.25</span>
+                    <span class="data-change positive" id="gas-change">+3.2%</span>
+                </div>
+                <div class="data-card">
+                    <span class="data-label">ESG Score</span>
+                    <span class="data-value" id="esg-score">73</span>
+                    <span class="data-change neutral">B+ Grade</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lower Third -->
+    <div id="lower-third-container">
+        <div class="news-ticker">
+            <div class="ticker-label">BREAKING</div>
+            <div class="ticker-content">
+                <span id="ticker-text">WTI Oil prices maintain strength above $78/bbl as global demand continues steady growth across energy markets...</span>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Add scroll spacer for better ticker access -->
+    <div class="scroll-spacer"></div>
+</div>
+
+<!-- Load External Files -->
+<link rel="stylesheet" href="../../css/teine/teine-live-news.css">
+<script>
+// Wait for slide to be visible, then load the script
+function loadLiveNewsScript() {
+    if (document.querySelector('.live-news-tv-slide')) {
+        const script = document.createElement('script');
+        script.src = '../../js/teine/teine-live-news.js';
+        script.onload = () => console.log('✅ Live News script loaded successfully');
+        document.head.appendChild(script);
+    }
+}
+
+// Load when DOM is ready OR when slide becomes visible
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', loadLiveNewsScript);
+} else {
+    loadLiveNewsScript();
+}
+</script>

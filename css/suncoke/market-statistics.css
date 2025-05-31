@@ -1,0 +1,361 @@
+/* Hatch Corporate Colors */
+:root {
+  --hatch-primary: #3b82f6;
+  --hatch-secondary: #1e40af;
+  --hatch-accent: #FF8A65;
+  --hatch-dark: #BF360C;
+}
+
+.market-statistics-slide {
+    padding: 10px 20px 150px 20px !important;
+    color: white;
+    min-height: auto;
+}
+
+/* Section spacing */
+.industry-health-section {
+    margin: 15px 0 25px 0 !important;
+}
+
+.commodity-section {
+    margin: 25px 0 25px 0 !important;
+}
+
+.competitive-section {
+    margin: 25px 0 25px 0 !important;
+}
+
+.regulatory-section {
+    margin: 25px 0 80px 0 !important;
+}
+
+/* Grid layouts */
+.health-metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px !important;
+    margin: 15px 0 25px 0 !important;
+}
+
+.commodity-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px !important;
+    margin: 15px 0 25px 0 !important;
+}
+
+.competitive-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px !important;
+    margin: 15px 0 25px 0 !important;
+}
+
+.regulatory-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px !important;
+    margin: 15px 0 80px 0 !important;
+}
+
+/* Card styles */
+.health-card {
+    background: rgba(255,255,255,0.95);
+    padding: 20px !important;
+    border-radius: 12px;
+    text-align: center;
+    color: #333;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
+    transition: transform 0.3s ease;
+    min-height: 160px !important;
+    margin: 5px 0 !important;
+}
+
+.commodity-panel {
+    background: rgba(255,255,255,0.95);
+    padding: 22px !important;
+    border-radius: 15px;
+    color: #333;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.1);
+    backdrop-filter: blur(10px);
+    border-left: 4px solid var(--hatch-primary);
+    min-height: 180px !important;
+    max-width: 100%;
+    margin: 5px 0 15px 0 !important;
+}
+
+.market-share-panel,
+.competitor-panel {
+    background: rgba(255,255,255,0.95);
+    padding: 22px !important;
+    border-radius: 15px;
+    color: #333;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.3);
+    min-height: 240px !important;
+    max-width: 100%;
+    margin: 5px 0 15px 0 !important;
+}
+
+.regulatory-card {
+    background: rgba(255,255,255,0.95);
+    padding: 20px !important;
+    border-radius: 12px;
+    text-align: center;
+    color: #333;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
+    transition: transform 0.3s ease;
+    min-height: 160px !important;
+    margin: 5px 0 !important;
+}
+
+/* Typography */
+.industry-health-section h2,
+.commodity-section h2,
+.regulatory-section h2 {
+    color: var(--hatch-accent);
+    font-size: 1.4em;
+    margin: 20px 0 15px 0 !important;
+    padding: 10px 0 !important;
+    text-align: center;
+}
+
+.market-share-panel h3,
+.competitor-panel h3 {
+    color: var(--hatch-secondary);
+    margin: 10px 0 18px 0 !important;
+    padding: 5px 0 !important;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.health-card h3 {
+    font-size: 1.1em;
+    margin: 0 0 12px 0 !important;
+    color: #2c3e50;
+    padding: 5px 0 !important;
+}
+
+.metric-value {
+    font-size: 1.6em;
+    font-weight: bold;
+    margin: 12px 0 !important;
+    color: var(--hatch-primary);
+    padding: 5px 0 !important;
+}
+
+.metric-change {
+    font-size: 0.9em;
+    font-weight: bold;
+    padding: 6px 10px !important;
+    border-radius: 15px;
+    margin: 8px 0 !important;
+}
+
+.metric-change.positive {
+    background: rgba(34, 197, 94, 0.2);
+    color: #16a34a;
+}
+
+.metric-change.negative {
+    background: rgba(239, 68, 68, 0.2);
+    color: #dc2626;
+}
+
+.metric-change.neutral {
+    background: rgba(156, 163, 175, 0.2);
+    color: #6b7280;
+}
+
+.metric-detail {
+    font-size: 0.8em;
+    color: #666;
+    margin: 8px 0 0 0 !important;
+    padding: 3px 0 !important;
+}
+
+/* Competitive landscape styles */
+.market-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 8px 0;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.market-label {
+    font-weight: 500;
+    color: #666;
+}
+
+.market-value {
+    font-weight: bold;
+    color: var(--hatch-primary);
+}
+
+.market-value.highlight {
+    color: var(--hatch-accent);
+    font-size: 1.1em;
+}
+
+.market-value.positive {
+    color: #16a34a;
+}
+
+.competitor-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 8px 0;
+    padding: 8px 12px;
+    background: rgba(0,0,0,0.05);
+    border-radius: 8px;
+}
+
+.competitor-item.highlight {
+    background: rgba(59, 130, 246, 0.1);
+    border: 1px solid var(--hatch-primary);
+}
+
+.competitor-name {
+    font-weight: 500;
+    color: #333;
+}
+
+.competitor-share {
+    font-weight: bold;
+    color: var(--hatch-primary);
+    margin: 0 10px;
+}
+
+.competitor-trend {
+    font-size: 0.9em;
+}
+
+/* Commodity pricing styles */
+.price-display {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.current-price {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: var(--hatch-primary);
+}
+
+.price-change {
+    font-size: 0.9em;
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 12px;
+}
+
+.price-trend {
+    margin-top: 10px;
+    padding: 8px;
+    background: rgba(0,0,0,0.05);
+    border-radius: 8px;
+}
+
+.mini-chart {
+    font-size: 0.85em;
+    color: #666;
+    font-style: italic;
+}
+
+/* Data timestamp */
+.data-timestamp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 0.8em;
+    color: rgba(255,255,255,0.7);
+    background: rgba(0,0,0,0.3);
+    padding: 5px 10px;
+    border-radius: 8px;
+    backdrop-filter: blur(5px);
+}
+
+/* Animations */
+.health-card,
+.regulatory-card {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.health-card:nth-child(1) { animation-delay: 0.1s; }
+.health-card:nth-child(2) { animation-delay: 0.2s; }
+.health-card:nth-child(3) { animation-delay: 0.3s; }
+.health-card:nth-child(4) { animation-delay: 0.4s; }
+
+/* Hover effects */
+.health-card:hover,
+.regulatory-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+}
+
+.commodity-panel:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .commodity-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .competitive-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .health-metrics-grid,
+    .regulatory-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .health-metrics-grid,
+    .regulatory-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    
+    .market-statistics-slide {
+        padding: 5px 10px 120px 10px !important;
+    }
+    
+    .commodity-panel,
+    .market-share-panel,
+    .competitor-panel {
+        padding: 15px;
+    }
+    
+    .regulatory-section {
+        margin: 25px 0 60px 0 !important;
+    }
+}

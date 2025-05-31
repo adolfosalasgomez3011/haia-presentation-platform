@@ -1,0 +1,341 @@
+/* 🔴 SUNCOKE EXECUTIVE SUMMARY STYLES - CARD GRADIENTS ONLY */
+
+/* Main Container - Keep it clean */
+.executive-summary-container {
+  width: 100%;
+  height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+  background: #f8fafc; /* Simple clean background */
+}
+
+/* OPTIMIZED GRID LAYOUT */
+.executive-layout {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 30px;
+  height: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* LEFT SIDE - METRICS CARDS */
+.metrics-section {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+.section-title {
+  color: #000000; /* Changed to black */
+  font-size: 1.5em;
+  font-weight: 700;
+  margin: 0 0 20px;
+  text-align: center;
+}
+
+#metrics-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  flex: 1;
+}
+
+/* 🎨 BEAUTIFUL CARD STYLING WITH SUNCOKE GRADIENTS */
+.metric-card {
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.95) 0%, 
+    rgba(248, 250, 252, 0.9) 40%,
+    rgba(216, 67, 21, 0.08) 100%
+  ) !important;
+  border-radius: 12px !important;
+  padding: 16px !important;
+  box-shadow: 
+    0 4px 15px rgba(0,0,0,0.08),
+    0 1px 3px rgba(216, 67, 21, 0.15) !important;
+  cursor: pointer !important;
+  text-align: center !important;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  border: 1px solid rgba(216, 67, 21, 0.2) !important;
+  min-height: 90px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+/* 🔥 ENHANCED HOVER EFFECTS - ONLY ON CARDS */
+.metric-card:hover {
+  transform: translateY(-6px) scale(1.03) !important;
+  box-shadow: 
+    0 15px 35px rgba(0,0,0,0.2) !important,
+    0 5px 10px rgba(216, 67, 21, 0.3) !important;
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.98) 0%, 
+    rgba(248, 250, 252, 0.95) 30%,
+    rgba(216, 67, 21, 0.12) 100%
+  ) !important;
+  border: 1px solid rgba(216, 67, 21, 0.4) !important;
+}
+
+/* ✨ SUBTLE GLOW EFFECT ON HOVER */
+.metric-card:hover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    circle at center,
+    rgba(216, 67, 21, 0.06) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+.metric-card h4 {
+  color: #000000 !important; /* Changed to black */
+  margin: 0 0 8px !important;
+  font-size: 0.8em !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  line-height: 1.2 !important;
+  word-wrap: break-word !important;
+  max-width: 100% !important;
+  position: relative;
+  z-index: 2;
+}
+
+.card-content {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  flex-wrap: wrap !important;
+  max-width: 100% !important;
+  position: relative;
+  z-index: 2;
+}
+
+.card-icon {
+  font-size: 1.2em !important;
+  flex-shrink: 0 !important;
+}
+
+.card-value {
+  font-size: 1em !important;
+  font-weight: 700 !important;
+  word-wrap: break-word !important;
+  text-align: center !important;
+  line-height: 1.2 !important;
+  max-width: calc(100% - 40px) !important;
+  overflow-wrap: break-word !important;
+  transition: all 0.3s ease;
+  color: #000000 !important; /* Changed to black */
+}
+
+/* RIGHT SIDE - CLEAN NO GRADIENTS */
+.content-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.image-container {
+  position: relative;
+  height: 300px; /* Increased from 200px to 300px */
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  flex-shrink: 0; /* Don't let it shrink */
+}
+
+.image-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.1); /* Simple dark overlay */
+  z-index: 1;
+}
+
+.plant-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.image-container:hover .plant-image {
+  transform: scale(1.05);
+}
+
+.executive-summary-box {
+  flex: 0 0 auto; /* Don't grow or shrink - fixed size */
+  height: 50%; /* Fixed height */
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  position: relative;
+  overflow-y: auto; /* Force scroll if content is too long */
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.executive-gradient-border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, 
+    #D84315 0%, 
+    #f8961e 50%, 
+    #D84315 100%
+  );
+  border-radius: 12px 12px 0 0;
+}
+
+.executive-title {
+  color: #000000; /* Changed to black */
+  font-size: 1.4em;
+  font-weight: 700;
+  margin: 0 0 20px;
+  display: flex;
+  align-items: center;
+}
+
+.executive-icon {
+  font-size: 1.2em;
+}
+
+#executive-content {
+  max-height: 400px !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  padding: 20px !important;
+  background: white !important;
+  border-radius: 12px !important;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1) !important;
+}
+
+.bottom-spacer {
+  height: 20px;
+}
+
+/* RESPONSIVE BREAKPOINTS */
+@media (max-width: 1200px) {
+  .executive-layout {
+    grid-template-columns: 1fr 1.5fr;
+    gap: 20px;
+  }
+  
+  .metric-card {
+    min-height: 80px;
+    padding: 12px !important;
+  }
+  
+  .metric-card h4 {
+    font-size: 0.75em !important;
+  }
+  
+  .card-value {
+    font-size: 0.9em !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .executive-layout {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    gap: 20px;
+  }
+  
+  .metrics-section {
+    order: 2;
+    max-height: 300px;
+  }
+  
+  #metrics-cards {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 10px;
+  }
+  
+  .content-section {
+    order: 1;
+  }
+  
+  .image-container {
+    height: 200px; /* Slightly smaller on mobile */
+  }
+  
+  .executive-summary-box {
+    max-height: 250px; /* Fixed height on mobile */
+  }
+}
+
+@media (max-width: 600px) {
+  .executive-summary-container {
+    padding: 15px;
+  }
+  
+  #metrics-cards {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 8px;
+  }
+  
+  .metric-card {
+    min-height: 70px;
+    padding: 10px !important;
+  }
+  
+  .metric-card h4 {
+    font-size: 0.7em !important;
+    margin: 0 0 6px !important;
+  }
+  
+  .card-value {
+    font-size: 0.85em !important;
+  }
+  
+  .card-icon {
+    font-size: 1em !important;
+  }
+  
+  .executive-summary-box {
+    padding: 15px;
+    max-height: 200px; /* Smaller height on mobile */
+  }
+  
+  .executive-title {
+    font-size: 1.2em;
+  }
+}
+
+/* Add this at the very END of your CSS file to ensure black text */
+
+/* FORCE BLACK TEXT ON CARD VALUES - STRONGEST OVERRIDE */
+.metric-card .card-value {
+  color: #000000 !important;
+}
+
+.metric-card h4 {
+  color: #000000 !important;
+}
+
+/* Override any inline styles from JavaScript */
+.metric-card span[class="card-value"] {
+  color: #000000 !important;
+}
+
+/* Extra specificity to override inline styles */
+div.metric-card span.card-value {
+  color: #000000 !important;
+}
+
+/* Nuclear option - override everything */
+.executive-summary-container .metrics-section .metric-card .card-value {
+  color: #000000 !important;
+}

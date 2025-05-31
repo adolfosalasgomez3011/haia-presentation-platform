@@ -1,0 +1,406 @@
+/* 🔴 SUNCOKE FINANCIAL CHARTS STYLES */
+
+/* Authentic SunCoke Corporate Colors */
+:root {
+  --suncoke-primary: #1e40af;      /* SunCoke Blue */
+  --suncoke-danger: #D84315;       /* SunCoke Red */
+  --suncoke-success: #16a34a;      /* Success Green */
+  --suncoke-warning: #f59e0b;      /* Warning Orange */
+  --suncoke-neutral: #64748b;      /* Neutral Gray */
+  --suncoke-gradient-blue: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+  --suncoke-gradient-red: linear-gradient(135deg, #ef4444 0%, #D84315 100%);
+  --suncoke-gradient-main: linear-gradient(135deg, #3b82f6 0%, #1e40af 50%, #D84315 100%);
+}
+
+/* Main Container */
+.financial-charts-slide {
+  padding: 0px 20px 150px 20px;
+  min-height: calc(100vh + 300px);
+  background: transparent !important;
+  color: white;
+  overflow-y: auto;
+  margin-top: -20px;
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Header Section */
+.slide-header {
+  text-align: center;
+  margin-bottom: 8px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 8px;
+  padding: 6px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.2);
+  margin-top: 0;
+}
+
+.slide-subtitle {
+  font-size: 1em;
+  opacity: 0.9;
+  margin: 0 0 4px 0;
+  color: rgba(255,255,255,0.95);
+  font-weight: 500;
+}
+
+.data-timestamp {
+  background: rgba(255,255,255,0.2);
+  padding: 2px 8px;
+  border-radius: 12px;
+  display: inline-block;
+  font-size: 0.75em;
+  color: white;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+
+/* Charts Container */
+.charts-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 8px;
+  padding: 0 5px;
+  margin-top: 0;
+}
+
+.chart-card {
+  background: rgba(255,255,255,0.95);
+  border-radius: 10px;
+  padding: 12px;
+  color: #333;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.2);
+  margin-bottom: 5px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.chart-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--suncoke-gradient-blue);
+}
+
+.chart-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
+
+.chart-title {
+  margin: 0 0 5px 0;
+  font-size: 1em;
+  color: #2c3e50;
+  text-align: center;
+  font-weight: 600;
+}
+
+.chart-info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4px;
+  font-weight: bold;
+  font-size: 0.85em;
+  padding-top: 4px;
+  border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+/* Value Styling with Smart Colors */
+.current-price, .value.positive { 
+  color: var(--suncoke-success) !important; 
+}
+
+.price-change.positive { 
+  color: var(--suncoke-success) !important;
+  background: rgba(22, 163, 74, 0.1);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.price-change.negative { 
+  color: var(--suncoke-danger) !important;
+  background: rgba(216, 67, 21, 0.1);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.value.negative { 
+  color: var(--suncoke-danger) !important; 
+}
+
+.value.neutral { 
+  color: var(--suncoke-neutral) !important; 
+}
+
+/* Status Indicators */
+.status-closed { 
+  color: var(--suncoke-danger) !important; 
+}
+
+.status-open { 
+  color: var(--suncoke-success) !important; 
+}
+
+/* Real-time Panel */
+.realtime-panel {
+  background: rgba(255,255,255,0.1);
+  border-radius: 10px;
+  padding: 10px;
+  margin: 8px 5px 15px 5px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.realtime-panel h3 {
+  margin: 0 0 6px 0;
+  font-size: 1.1em;
+  font-weight: 600;
+}
+
+.realtime-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.realtime-item {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background: rgba(255,255,255,0.1);
+  padding: 6px;
+  border-radius: 6px;
+  border: 1px solid rgba(255,255,255,0.15);
+}
+
+.realtime-item .label {
+  font-size: 0.8em;
+  opacity: 0.8;
+  margin-bottom: 3px;
+  font-weight: 500;
+}
+
+.realtime-item .value {
+  font-weight: bold;
+  font-size: 1em;
+  color: #f39c12;
+}
+
+/* Action Buttons */
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin: 10px 0 80px 0;
+  padding-bottom: 50px;
+  flex-wrap: wrap;
+}
+
+.action-buttons button {
+  background: var(--suncoke-gradient-blue) !important;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.85em;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.2);
+  position: relative;
+  overflow: hidden;
+  min-width: 120px;
+}
+
+.action-buttons button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.5s;
+}
+
+.action-buttons button:hover::before {
+  left: 100%;
+}
+
+.action-buttons button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 18px rgba(0,0,0,0.3);
+}
+
+/* Specific Button Styles */
+.refresh-btn { 
+  background: linear-gradient(135deg, #4CAF50, #66BB6A) !important; 
+}
+
+.export-btn { 
+  background: linear-gradient(135deg, #FF9800, #F57C00) !important; 
+}
+
+.autogen-btn { 
+  background: var(--suncoke-gradient-main) !important; 
+}
+
+.fullscreen-btn { 
+  background: var(--suncoke-gradient-red) !important; 
+}
+
+/* Status Indicators and Animations */
+.status-indicator.live {
+  color: var(--suncoke-primary) !important;
+  animation: pulse 2s infinite;
+}
+
+.status-indicator.alert {
+  color: var(--suncoke-danger) !important;
+  animation: blink 1s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0.3; }
+}
+
+/* Chart Loading Animation */
+.chart-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  background: linear-gradient(90deg, #f1f5f9 0%, #e2e8f0 50%, #f1f5f9 100%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 8px;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* Card Entry Animation */
+.chart-card {
+  animation: slideInUp 0.5s ease-out both;
+}
+
+.chart-card:nth-child(1) { animation-delay: 0.1s; }
+.chart-card:nth-child(2) { animation-delay: 0.2s; }
+.chart-card:nth-child(3) { animation-delay: 0.3s; }
+.chart-card:nth-child(4) { animation-delay: 0.4s; }
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* SunCoke Color Indicators */
+.hatch-red-indicator,
+.suncoke-indicator {
+  color: var(--suncoke-primary) !important;
+  font-weight: bold !important;
+  text-shadow: 0 0 2px rgba(30, 64, 175, 0.5) !important;
+}
+
+/* Override Reveal.js Theme Colors */
+.reveal .slides section .hatch-red-indicator,
+.reveal .slides section.present .hatch-red-indicator,
+.reveal .slides section .suncoke-indicator {
+  color: var(--suncoke-primary) !important;
+}
+
+/* Canvas Styling */
+canvas {
+  max-width: 100% !important;
+  height: auto !important;
+  border-radius: 6px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .financial-charts-slide {
+    padding: 5px 10px 200px 10px;
+  }
+  
+  .charts-container {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 0 5px;
+  }
+  
+  .realtime-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+  
+  .slide-header {
+    padding: 8px;
+    margin-bottom: 12px;
+  }
+  
+  .chart-card {
+    padding: 12px;
+  }
+  
+  .action-buttons {
+    flex-direction: column;
+    gap: 6px;
+  }
+  
+  .action-buttons button {
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .realtime-grid {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+  
+  .chart-title {
+    font-size: 0.9em;
+  }
+  
+  .chart-info {
+    font-size: 0.8em;
+    flex-direction: column;
+    gap: 2px;
+    text-align: center;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .action-buttons {
+    display: none !important;
+  }
+  
+  .chart-card {
+    break-inside: avoid;
+    box-shadow: none !important;
+    border: 1px solid #ccc !important;
+  }
+}

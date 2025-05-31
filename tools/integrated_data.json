@@ -1,0 +1,699 @@
+{
+  "metadata": {
+    "generated_by": "Master Data Integrator",
+    "version": "1.0.0",
+    "timestamp": "2025-05-25T21:10:16.246829",
+    "data_sources_count": 4
+  },
+  "integrated_data": {
+    "integration_timestamp": "2025-05-25T21:10:16.245820",
+    "data_sources": [
+      "FRED Steel Production",
+      "Commodity Prices",
+      "Carbon Credits & Environmental",
+      "ESG Ratings & Sustainability"
+    ],
+    "company_focus": "SunCoke Energy (SXC)",
+    "industry_focus": "Steel & Coal",
+    "summary": {
+      "overall_status": "Operational",
+      "data_freshness": "Live",
+      "last_updated": "2025-05-25 21:10:16",
+      "steel_production": {
+        "current_index": 93.8793,
+        "yoy_change": "-1.9% YoY",
+        "status": "Available"
+      },
+      "commodity_outlook": {
+        "oil_price": "$63.98/barrel",
+        "copper_price": "$9172.70/lb",
+        "steel_etf": "$62.18",
+        "status": "Available"
+      },
+      "environmental_profile": {
+        "esg_compliance": "B+",
+        "carbon_intensity": "2.1 tCO2/MWh",
+        "renewable_mix": "15%",
+        "status": "Available"
+      },
+      "esg_performance": {
+        "overall_score": "B-",
+        "environmental": "C+",
+        "social": "B",
+        "governance": "B+",
+        "recommendation": "Hold - Adequate ESG performance, monitor improvements",
+        "status": "Available"
+      }
+    },
+    "fred_steel": {
+      "steel_production": "93.9 Index",
+      "steel_change": "-1.9% YoY",
+      "steel_index": 93.8793,
+      "last_date": "2025-04-01",
+      "data_source": "FRED",
+      "extraction_time": "2025-05-25T21:10:12.044038",
+      "capacity_util": "Data not available",
+      "capacity_change": "N/A",
+      "extraction_status": "partial_success",
+      "total_extracted": 1,
+      "note": "Steel production data available, capacity utilization unavailable"
+    },
+    "commodity_prices": {
+      "extraction_status": "success",
+      "commodities_extracted": [
+        "WTI Oil",
+        "Copper",
+        "Steel ETF"
+      ],
+      "wti_oil_price": "$63.98/barrel",
+      "oil_change": "+0.2%",
+      "oil_price_value": 63.98,
+      "oil_date": "2025-05-19",
+      "data_source": "Alpha Vantage",
+      "extraction_time": "2025-05-25T21:10:15.742665",
+      "copper_price": "$9172.70/lb",
+      "copper_change": "-5.8%",
+      "copper_price_value": 9172.69590909091,
+      "copper_date": "2025-04-01",
+      "steel_etf_price": "$62.18",
+      "steel_etf_change": "+0.8%",
+      "steel_etf_value": 62.1824,
+      "steel_etf_volume": 9087,
+      "steel_etf_date": "2025-05-23",
+      "total_extracted": 3
+    },
+    "carbon_environmental": {
+      "extraction_status": "success",
+      "carbon_data_sources": [
+        "Environmental Compliance",
+        "Market Trends"
+      ],
+      "esg_compliance_score": "B+",
+      "carbon_intensity": "2.1 tCO2/MWh",
+      "renewable_energy_mix": "15%",
+      "emission_reduction_progress": "12% vs 2019",
+      "environmental_certifications": [
+        "ISO 14001",
+        "EPA Partnership"
+      ],
+      "carbon_offset_programs": "Active",
+      "waste_reduction": "8% improvement",
+      "water_usage_efficiency": "95% recycled",
+      "air_quality_compliance": "Meets EPA standards",
+      "sustainability_initiatives": [
+        "Carbon capture research",
+        "Waste heat recovery",
+        "Habitat restoration"
+      ],
+      "compliance_date": "2025-05-25",
+      "data_source": "Carbon Market Analysis",
+      "extraction_time": "2025-05-25T21:10:16.244749",
+      "carbon_market_cap": "$760 billion",
+      "annual_trading_volume": "€683 billion",
+      "price_trend_6m": "+18.5%",
+      "price_volatility": "Medium-High",
+      "market_outlook": "Bullish on regulatory tightening",
+      "key_drivers": [
+        "EU Green Deal implementation",
+        "Corporate net-zero commitments",
+        "Supply constraint mechanisms"
+      ],
+      "price_forecast_2025": "€90-110/tonne",
+      "regulatory_changes": [
+        "Scope expansion to shipping",
+        "Free allocation reduction",
+        "Market Stability Reserve activation"
+      ],
+      "regional_markets": {
+        "EU_ETS": "€85.50/tonne",
+        "California_Quebec": "$30.25/tonne",
+        "RGGI": "$15.80/tonne",
+        "China_ETS": "$7.50/tonne"
+      },
+      "trends_date": "2025-05-25",
+      "total_carbon_sources": 2,
+      "summary": "Carbon and environmental data from 2 sources"
+    },
+    "esg_ratings": {
+      "extraction_status": "success",
+      "esg_data_sources": [
+        "Company ESG Rating",
+        "Industry Benchmarks",
+        "Investment Metrics",
+        "News Sentiment"
+      ],
+      "company_name": "SunCoke Energy",
+      "company_symbol": "SXC",
+      "overall_esg_score": "B-",
+      "overall_esg_numeric": 62,
+      "esg_grade_scale": "AAA (best) to D (worst)",
+      "environmental_score": "C+",
+      "environmental_numeric": 58,
+      "environmental_factors": {
+        "carbon_emissions": "High (steel/coal industry)",
+        "energy_efficiency": "Improving",
+        "waste_management": "Adequate",
+        "water_usage": "Monitored",
+        "environmental_initiatives": "Active carbon reduction programs"
+      },
+      "social_score": "B",
+      "social_numeric": 68,
+      "social_factors": {
+        "employee_safety": "Strong safety record",
+        "community_relations": "Active local engagement",
+        "diversity_inclusion": "Developing programs",
+        "labor_practices": "Union partnerships",
+        "product_safety": "High industrial standards"
+      },
+      "governance_score": "B+",
+      "governance_numeric": 72,
+      "governance_factors": {
+        "board_independence": "Majority independent",
+        "executive_compensation": "Aligned with performance",
+        "transparency": "Regular SEC filings",
+        "ethics_compliance": "Comprehensive code",
+        "risk_management": "Structured approach"
+      },
+      "rating_date": "2025-05-25",
+      "data_source": "ESG News Analysis",
+      "extraction_time": "2025-05-25T21:10:16.245820",
+      "industry_sector": "Steel & Coal",
+      "industry_esg_average": "C+",
+      "industry_numeric_average": 55,
+      "industry_challenges": [
+        "High carbon emissions",
+        "Environmental regulations",
+        "Energy transition pressure",
+        "Air quality concerns",
+        "Water usage intensity"
+      ],
+      "industry_opportunities": [
+        "Carbon capture technology",
+        "Renewable energy adoption",
+        "Circular economy practices",
+        "Green steel initiatives",
+        "ESG-focused investments"
+      ],
+      "peer_companies": {
+        "United_States_Steel": "C+",
+        "Nucor_Corporation": "B-",
+        "Cleveland_Cliffs": "C",
+        "Steel_Dynamics": "B-",
+        "Industry_Average": "C+"
+      },
+      "industry_trends": {
+        "decarbonization_initiatives": "Accelerating",
+        "regulatory_pressure": "Increasing",
+        "investor_focus": "High ESG scrutiny",
+        "technology_adoption": "Growing investment",
+        "stakeholder_expectations": "Rising standards"
+      },
+      "regulatory_landscape": {
+        "epa_compliance": "Mandatory",
+        "carbon_pricing": "Emerging",
+        "disclosure_requirements": "Expanding",
+        "international_standards": "Harmonizing"
+      },
+      "benchmark_date": "2025-05-25",
+      "esg_investment_flow": "$30.3 trillion globally",
+      "sustainable_investing_growth": "+15.1% annually",
+      "esg_fund_assets": "$2.8 trillion",
+      "esg_valuation_impact": {
+        "premium_for_high_esg": "10-15%",
+        "discount_for_low_esg": "5-20%",
+        "cost_of_capital_benefit": "0.5-1.0% lower",
+        "access_to_capital": "Improved for high ESG"
+      },
+      "esg_risk_factors": {
+        "transition_risk": "High for carbon-intensive industries",
+        "physical_risk": "Climate-related operational impacts",
+        "regulatory_risk": "Evolving compliance requirements",
+        "reputational_risk": "Social media and stakeholder scrutiny"
+      },
+      "esg_opportunities": {
+        "green_financing": "Lower interest rates available",
+        "esg_funds_access": "Growing investor base",
+        "operational_efficiency": "Cost savings through sustainability",
+        "brand_value": "Enhanced reputation and market position"
+      },
+      "investment_considerations": [
+        "ESG scores trending upward favor institutional investment",
+        "Carbon intensity reduction critical for long-term value",
+        "Social license to operate essential in steel industry",
+        "Governance improvements attract ESG-focused funds"
+      ],
+      "rating_agencies": {
+        "MSCI": "Leading ESG ratings provider",
+        "Sustainalytics": "Risk-focused ESG assessment",
+        "S&P_Global": "Corporate sustainability assessment",
+        "Refinitiv": "ESG data and scores"
+      },
+      "metrics_date": "2025-05-25",
+      "recent_esg_news": [
+        {
+          "headline": "SunCoke Energy announces carbon reduction targets",
+          "sentiment": "Positive",
+          "impact": "ESG score improvement expected",
+          "date": "2025-05-20"
+        },
+        {
+          "headline": "Steel industry faces increasing ESG scrutiny",
+          "sentiment": "Neutral",
+          "impact": "Industry-wide challenge",
+          "date": "2025-05-18"
+        },
+        {
+          "headline": "Coal companies investing in clean technologies",
+          "sentiment": "Positive",
+          "impact": "Transition opportunity",
+          "date": "2025-05-15"
+        }
+      ],
+      "sentiment_analysis": {
+        "overall_sentiment": "Cautiously Positive",
+        "esg_momentum": "Improving",
+        "media_attention": "Moderate",
+        "stakeholder_sentiment": "Watchful optimism"
+      },
+      "key_esg_themes": [
+        "Carbon reduction commitments",
+        "Technology investment",
+        "Regulatory compliance",
+        "Stakeholder engagement",
+        "Transition planning"
+      ],
+      "sentiment_date": "2025-05-25",
+      "total_esg_sources": 4,
+      "esg_summary": "Comprehensive ESG analysis from 4 sources",
+      "recommendation": {
+        "investment_recommendation": "Hold - Adequate ESG performance, monitor improvements",
+        "esg_score_basis": 62,
+        "key_factors": [
+          "Environmental transition progress",
+          "Industry benchmark comparison",
+          "Regulatory compliance status",
+          "Stakeholder sentiment trends"
+        ],
+        "recommendation_date": "2025-05-25"
+      }
+    }
+  },
+  "analytics_results": {
+    "analysis_timestamp": "2025-05-25T21:10:16.246829",
+    "analytics_version": "1.0",
+    "investment_analysis": {
+      "investment_score": 62,
+      "investment_grade": "B-",
+      "factors": [
+        "Strong steel production (>90 index)",
+        "Active commodity markets with steel ETF tracking",
+        "Adequate ESG performance"
+      ]
+    },
+    "risk_analysis": {
+      "overall_risk": "Medium-High",
+      "risk_factors": [
+        "Carbon-intensive industry exposure",
+        "Regulatory environment changes",
+        "Commodity price volatility",
+        "Energy transition pressure"
+      ],
+      "mitigation_factors": [
+        "ESG improvement initiatives",
+        "Governance strength (B+)",
+        "Industry diversification potential",
+        "Technology adoption opportunities"
+      ]
+    },
+    "esg_analysis": {
+      "esg_trajectory": "Improving",
+      "key_strengths": [
+        "Governance excellence (B+)",
+        "Social performance above industry average",
+        "Active environmental initiatives"
+      ],
+      "improvement_areas": [
+        "Environmental score enhancement",
+        "Carbon intensity reduction",
+        "Renewable energy adoption"
+      ],
+      "industry_position": "Above average (62 vs 55 industry average)"
+    },
+    "market_analysis": {
+      "market_environment": "Mixed",
+      "steel_market": "Contracting (-1.9% YoY)",
+      "commodity_trends": "Volatile with oil stability",
+      "investment_climate": "ESG-focused with sustainability premium"
+    },
+    "recommendations": {
+      "investment_recommendation": "HOLD with ESG monitoring",
+      "price_target": "Monitor for ESG improvements",
+      "time_horizon": "12-18 months",
+      "strategic_recommendations": [
+        "Accelerate carbon reduction initiatives",
+        "Enhance environmental reporting transparency",
+        "Strengthen renewable energy partnerships",
+        "Maintain governance excellence",
+        "Monitor regulatory developments"
+      ],
+      "catalysts_to_watch": [
+        "ESG score improvements",
+        "Carbon capture technology adoption",
+        "Regulatory clarity on carbon pricing",
+        "Steel market recovery",
+        "Green financing opportunities"
+      ]
+    }
+  },
+  "presentation_data": {
+    "slide_data": {
+      "title_slide": {
+        "company": "SunCoke Energy (SXC)",
+        "analysis_date": "May 25, 2025",
+        "data_sources": 4,
+        "overall_rating": "B-"
+      },
+      "executive_summary": {
+        "overall_status": "Operational",
+        "data_freshness": "Live",
+        "last_updated": "2025-05-25 21:10:16",
+        "steel_production": {
+          "current_index": 93.8793,
+          "yoy_change": "-1.9% YoY",
+          "status": "Available"
+        },
+        "commodity_outlook": {
+          "oil_price": "$63.98/barrel",
+          "copper_price": "$9172.70/lb",
+          "steel_etf": "$62.18",
+          "status": "Available"
+        },
+        "environmental_profile": {
+          "esg_compliance": "B+",
+          "carbon_intensity": "2.1 tCO2/MWh",
+          "renewable_mix": "15%",
+          "status": "Available"
+        },
+        "esg_performance": {
+          "overall_score": "B-",
+          "environmental": "C+",
+          "social": "B",
+          "governance": "B+",
+          "recommendation": "Hold - Adequate ESG performance, monitor improvements",
+          "status": "Available"
+        }
+      },
+      "steel_production": {
+        "steel_production": "93.9 Index",
+        "steel_change": "-1.9% YoY",
+        "steel_index": 93.8793,
+        "last_date": "2025-04-01",
+        "data_source": "FRED",
+        "extraction_time": "2025-05-25T21:10:12.044038",
+        "capacity_util": "Data not available",
+        "capacity_change": "N/A",
+        "extraction_status": "partial_success",
+        "total_extracted": 1,
+        "note": "Steel production data available, capacity utilization unavailable"
+      },
+      "commodity_markets": {
+        "extraction_status": "success",
+        "commodities_extracted": [
+          "WTI Oil",
+          "Copper",
+          "Steel ETF"
+        ],
+        "wti_oil_price": "$63.98/barrel",
+        "oil_change": "+0.2%",
+        "oil_price_value": 63.98,
+        "oil_date": "2025-05-19",
+        "data_source": "Alpha Vantage",
+        "extraction_time": "2025-05-25T21:10:15.742665",
+        "copper_price": "$9172.70/lb",
+        "copper_change": "-5.8%",
+        "copper_price_value": 9172.69590909091,
+        "copper_date": "2025-04-01",
+        "steel_etf_price": "$62.18",
+        "steel_etf_change": "+0.8%",
+        "steel_etf_value": 62.1824,
+        "steel_etf_volume": 9087,
+        "steel_etf_date": "2025-05-23",
+        "total_extracted": 3
+      },
+      "environmental_profile": {
+        "extraction_status": "success",
+        "carbon_data_sources": [
+          "Environmental Compliance",
+          "Market Trends"
+        ],
+        "esg_compliance_score": "B+",
+        "carbon_intensity": "2.1 tCO2/MWh",
+        "renewable_energy_mix": "15%",
+        "emission_reduction_progress": "12% vs 2019",
+        "environmental_certifications": [
+          "ISO 14001",
+          "EPA Partnership"
+        ],
+        "carbon_offset_programs": "Active",
+        "waste_reduction": "8% improvement",
+        "water_usage_efficiency": "95% recycled",
+        "air_quality_compliance": "Meets EPA standards",
+        "sustainability_initiatives": [
+          "Carbon capture research",
+          "Waste heat recovery",
+          "Habitat restoration"
+        ],
+        "compliance_date": "2025-05-25",
+        "data_source": "Carbon Market Analysis",
+        "extraction_time": "2025-05-25T21:10:16.244749",
+        "carbon_market_cap": "$760 billion",
+        "annual_trading_volume": "€683 billion",
+        "price_trend_6m": "+18.5%",
+        "price_volatility": "Medium-High",
+        "market_outlook": "Bullish on regulatory tightening",
+        "key_drivers": [
+          "EU Green Deal implementation",
+          "Corporate net-zero commitments",
+          "Supply constraint mechanisms"
+        ],
+        "price_forecast_2025": "€90-110/tonne",
+        "regulatory_changes": [
+          "Scope expansion to shipping",
+          "Free allocation reduction",
+          "Market Stability Reserve activation"
+        ],
+        "regional_markets": {
+          "EU_ETS": "€85.50/tonne",
+          "California_Quebec": "$30.25/tonne",
+          "RGGI": "$15.80/tonne",
+          "China_ETS": "$7.50/tonne"
+        },
+        "trends_date": "2025-05-25",
+        "total_carbon_sources": 2,
+        "summary": "Carbon and environmental data from 2 sources"
+      },
+      "esg_ratings": {
+        "extraction_status": "success",
+        "esg_data_sources": [
+          "Company ESG Rating",
+          "Industry Benchmarks",
+          "Investment Metrics",
+          "News Sentiment"
+        ],
+        "company_name": "SunCoke Energy",
+        "company_symbol": "SXC",
+        "overall_esg_score": "B-",
+        "overall_esg_numeric": 62,
+        "esg_grade_scale": "AAA (best) to D (worst)",
+        "environmental_score": "C+",
+        "environmental_numeric": 58,
+        "environmental_factors": {
+          "carbon_emissions": "High (steel/coal industry)",
+          "energy_efficiency": "Improving",
+          "waste_management": "Adequate",
+          "water_usage": "Monitored",
+          "environmental_initiatives": "Active carbon reduction programs"
+        },
+        "social_score": "B",
+        "social_numeric": 68,
+        "social_factors": {
+          "employee_safety": "Strong safety record",
+          "community_relations": "Active local engagement",
+          "diversity_inclusion": "Developing programs",
+          "labor_practices": "Union partnerships",
+          "product_safety": "High industrial standards"
+        },
+        "governance_score": "B+",
+        "governance_numeric": 72,
+        "governance_factors": {
+          "board_independence": "Majority independent",
+          "executive_compensation": "Aligned with performance",
+          "transparency": "Regular SEC filings",
+          "ethics_compliance": "Comprehensive code",
+          "risk_management": "Structured approach"
+        },
+        "rating_date": "2025-05-25",
+        "data_source": "ESG News Analysis",
+        "extraction_time": "2025-05-25T21:10:16.245820",
+        "industry_sector": "Steel & Coal",
+        "industry_esg_average": "C+",
+        "industry_numeric_average": 55,
+        "industry_challenges": [
+          "High carbon emissions",
+          "Environmental regulations",
+          "Energy transition pressure",
+          "Air quality concerns",
+          "Water usage intensity"
+        ],
+        "industry_opportunities": [
+          "Carbon capture technology",
+          "Renewable energy adoption",
+          "Circular economy practices",
+          "Green steel initiatives",
+          "ESG-focused investments"
+        ],
+        "peer_companies": {
+          "United_States_Steel": "C+",
+          "Nucor_Corporation": "B-",
+          "Cleveland_Cliffs": "C",
+          "Steel_Dynamics": "B-",
+          "Industry_Average": "C+"
+        },
+        "industry_trends": {
+          "decarbonization_initiatives": "Accelerating",
+          "regulatory_pressure": "Increasing",
+          "investor_focus": "High ESG scrutiny",
+          "technology_adoption": "Growing investment",
+          "stakeholder_expectations": "Rising standards"
+        },
+        "regulatory_landscape": {
+          "epa_compliance": "Mandatory",
+          "carbon_pricing": "Emerging",
+          "disclosure_requirements": "Expanding",
+          "international_standards": "Harmonizing"
+        },
+        "benchmark_date": "2025-05-25",
+        "esg_investment_flow": "$30.3 trillion globally",
+        "sustainable_investing_growth": "+15.1% annually",
+        "esg_fund_assets": "$2.8 trillion",
+        "esg_valuation_impact": {
+          "premium_for_high_esg": "10-15%",
+          "discount_for_low_esg": "5-20%",
+          "cost_of_capital_benefit": "0.5-1.0% lower",
+          "access_to_capital": "Improved for high ESG"
+        },
+        "esg_risk_factors": {
+          "transition_risk": "High for carbon-intensive industries",
+          "physical_risk": "Climate-related operational impacts",
+          "regulatory_risk": "Evolving compliance requirements",
+          "reputational_risk": "Social media and stakeholder scrutiny"
+        },
+        "esg_opportunities": {
+          "green_financing": "Lower interest rates available",
+          "esg_funds_access": "Growing investor base",
+          "operational_efficiency": "Cost savings through sustainability",
+          "brand_value": "Enhanced reputation and market position"
+        },
+        "investment_considerations": [
+          "ESG scores trending upward favor institutional investment",
+          "Carbon intensity reduction critical for long-term value",
+          "Social license to operate essential in steel industry",
+          "Governance improvements attract ESG-focused funds"
+        ],
+        "rating_agencies": {
+          "MSCI": "Leading ESG ratings provider",
+          "Sustainalytics": "Risk-focused ESG assessment",
+          "S&P_Global": "Corporate sustainability assessment",
+          "Refinitiv": "ESG data and scores"
+        },
+        "metrics_date": "2025-05-25",
+        "recent_esg_news": [
+          {
+            "headline": "SunCoke Energy announces carbon reduction targets",
+            "sentiment": "Positive",
+            "impact": "ESG score improvement expected",
+            "date": "2025-05-20"
+          },
+          {
+            "headline": "Steel industry faces increasing ESG scrutiny",
+            "sentiment": "Neutral",
+            "impact": "Industry-wide challenge",
+            "date": "2025-05-18"
+          },
+          {
+            "headline": "Coal companies investing in clean technologies",
+            "sentiment": "Positive",
+            "impact": "Transition opportunity",
+            "date": "2025-05-15"
+          }
+        ],
+        "sentiment_analysis": {
+          "overall_sentiment": "Cautiously Positive",
+          "esg_momentum": "Improving",
+          "media_attention": "Moderate",
+          "stakeholder_sentiment": "Watchful optimism"
+        },
+        "key_esg_themes": [
+          "Carbon reduction commitments",
+          "Technology investment",
+          "Regulatory compliance",
+          "Stakeholder engagement",
+          "Transition planning"
+        ],
+        "sentiment_date": "2025-05-25",
+        "total_esg_sources": 4,
+        "esg_summary": "Comprehensive ESG analysis from 4 sources",
+        "recommendation": {
+          "investment_recommendation": "Hold - Adequate ESG performance, monitor improvements",
+          "esg_score_basis": 62,
+          "key_factors": [
+            "Environmental transition progress",
+            "Industry benchmark comparison",
+            "Regulatory compliance status",
+            "Stakeholder sentiment trends"
+          ],
+          "recommendation_date": "2025-05-25"
+        }
+      },
+      "investment_analysis": {
+        "investment_score": 62,
+        "investment_grade": "B-",
+        "factors": [
+          "Strong steel production (>90 index)",
+          "Active commodity markets with steel ETF tracking",
+          "Adequate ESG performance"
+        ]
+      },
+      "recommendations": {
+        "investment_recommendation": "HOLD with ESG monitoring",
+        "price_target": "Monitor for ESG improvements",
+        "time_horizon": "12-18 months",
+        "strategic_recommendations": [
+          "Accelerate carbon reduction initiatives",
+          "Enhance environmental reporting transparency",
+          "Strengthen renewable energy partnerships",
+          "Maintain governance excellence",
+          "Monitor regulatory developments"
+        ],
+        "catalysts_to_watch": [
+          "ESG score improvements",
+          "Carbon capture technology adoption",
+          "Regulatory clarity on carbon pricing",
+          "Steel market recovery",
+          "Green financing opportunities"
+        ]
+      }
+    },
+    "charts_data": {
+      "esg_scores": {
+        "environmental": 58,
+        "social": 68,
+        "governance": 72
+      },
+      "steel_trend": {
+        "current": 93.8793,
+        "change": "-1.9% YoY"
+      }
+    }
+  }
+}

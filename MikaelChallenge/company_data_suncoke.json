@@ -1,0 +1,88 @@
+{
+  "company": {
+    "name": "SunCoke Energy",
+    "date": "April 2024",
+    "logo_url": "img/suncoke-logo.png",
+    "year_founded": 1960,
+    "hq": "Lisle, Illinois",
+    "industry": "Metallurgical Coke & Logistics",
+    "ownership_type": "Public",
+    "website": "https://www.suncoke.com",
+    "ticker_symbol": "SXC",
+    "market_cap": 0.7
+  },
+  "summary": "SunCoke Energy produces coke for steelmaking and handles 40M+ tons of material yearly.",
+  "segments": [
+    {
+      "name": "Cokemaking",
+      "description": "Domestic and Brazil-based heat-recovery coke plants."
+    },
+    {
+      "name": "Logistics",
+      "description": "Bulk coal and coke handling via rail/barge."
+    }
+  ],
+  "financials": {
+    "revenue_2023": 2063,
+    "ebitda_2023": 269,
+    "funding": 0,
+    "valuation": 700,
+    "operating_income": 50
+  },
+  "assets": [
+    {
+      "name": "Granite City",
+      "production": "4.2M tons furnace coke",
+      "land": "US-based",
+      "region": "Midwest",
+      "highlights": "High-efficiency, long-term supply contracts"
+    }
+  ],
+  "strategy": {
+    "cost_efficiency": "Heat recovery reduces energy costs.",
+    "productivity": "Full capacity utilization in foundry market.",
+    "recovery": "Low emissions process yields electricity as byproduct."
+  },
+  "esg": {
+    "emissions": "50% less CO2 than traditional cokemaking.",
+    "water": "Minimal industrial water use.",
+    "rating_source": "Internal review 2023",
+    "projects": "Granulated Pig Iron (GPI) pilot with US Steel"
+  },
+  "leadership": [
+    {
+      "name": "Michael Rippey",
+      "role": "CEO",
+      "bio": "30+ years in steel industry.",
+      "past_roles": "ArcelorMittal, US Steel"
+    }
+  ],
+  "quotes": [
+    {
+      "person": "Michael Rippey",
+      "role": "CEO",
+      "text": "We lead with innovation and lower-carbon coke."
+    }
+  ],
+  "news": [
+    {
+      "date": "2024-04-03",
+      "headline": "SunCoke announces GPI project with US Steel"
+    }
+  ],
+  "market": {
+    "tam": "$20B metallurgical coke market",
+    "competitors": ["Cliffs Natural", "ArcelorMittal"],
+    "differentiators": "Heat recovery tech, logistics scale"
+  },
+  "risks": {
+    "market": "Steel demand fluctuations",
+    "regulatory": "Clean air regulations",
+    "environment": "Coal-based carbon footprint"
+  },
+  "contact": {
+    "email": "info@suncoke.com",
+    "phone": "+1-312-987-6543"
+  },
+  "closing_statement": "Powering steel. Cleanly. Efficiently."
+}

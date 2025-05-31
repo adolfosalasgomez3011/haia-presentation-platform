@@ -1,0 +1,66 @@
+/* Chart Section Styles */
+.main-chart-section {
+    background: rgba(0,0,0,0.8);
+    padding: 25px;
+    border-radius: 15px;
+    margin: 25px;
+    border: 2px solid var(--news-accent);
+    box-shadow: 0 0 20px rgba(255,215,0,0.3);
+}
+
+.chart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.chart-header h3 {
+    color: var(--news-accent);
+    margin: 0;
+    font-size: 1.4em;
+}
+
+.chart-controls {
+    display: flex;
+    gap: 15px;
+}
+
+.chart-btn {
+    background: rgba(255,255,255,0.1);
+    color: white;
+    border: 1px solid rgba(255,255,255,0.2);
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+.chart-btn:hover,
+.chart-btn.active {
+    background: var(--news-primary);
+    border-color: var(--news-primary);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(196,30,58,0.4);
+}
+
+.chart-display {
+    background: rgba(0,0,0,0.3);
+    border-radius: 10px;
+    border: 1px solid rgba(255,215,0,0.3);
+    padding: 15px;
+}
+
+#chart-line {
+    stroke-dasharray: 1500;
+    stroke-dashoffset: 1500;
+    animation: draw-line 4s ease-in-out infinite;
+}
+
+@keyframes draw-line {
+    0% { stroke-dashoffset: 1500; }
+    50% { stroke-dashoffset: 0; }
+    100% { stroke-dashoffset: 1500; }
+}
